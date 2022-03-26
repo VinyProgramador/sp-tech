@@ -1,0 +1,29 @@
+
+.divPai{
+    background-color: #ffa500;
+    width: 500px;
+    height: 500px;
+}
+.divFilha{
+    background-color: #735fb6;
+    width: 250px;
+    height: 250px;
+}
+.paragrafo{
+    color: #fff;
+    background-color: rgb(36, 16, 144);
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.divPai02{
+background-color: rgb(19, 47, 56);
+width: 50%;
+height: 50vh;
+}
+.divFilha02{
+    width: 75%;
+    height: 25vh;
+    background-color: rgb(155, 141, 141);
+}
