@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05 JavaScript com entradas.</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    span {
+        text-align: center;
+    }
+
+    label {
+        font-weight: bolder;
+    }
+    input{
+        outline: 0;
+        text-align: center;
+        border: 1px solid red;
+        border-radius: 3px;
+        padding: 4px;
+    }
+    button{
+        padding: 6px;
+        outline: 0;
+        border: 1px solid red;
+        color: red;
+        background-color: transparent;
+        border-radius: 3px;
+        transition: all .3s ease-in-out;
+
+    }
+    button:hover{
+        transform: scale(105%, 105%);
+
+    }
+</style>
+
+<body>
+    <span>
+        <div>
+            <label>
+                Sabor: <br>
+                <input type="text" id="saborPizza" placeholder="Digite o sabor..">
+            </label><br><br>
+            <label>
+                Preço: <br>
+                <input type="number" id="preco" placeholder="Digite o preço..">
+            </label><br><br>
+            <label>
+                Quantidade de pessoas que vão comer: <br>
+                <input type="number" id="pessoas" placeholder="Pessoas..">
+            </label><br><br>
+            <button onclick="valorPorPessoa()">Ver valor por amigo</button>
+        </div><br><br>
+
+        <div id="precoFinal"></div>
+    </span>
+</body>
+<script>
+
+    function valorPorPessoa() {
+
+        var precoPizza = Number((preco.value));
+        var pessoasPizza = Number((pessoas.value));
+        var sabordaPizza = (saborPizza.value);
+        taxaEntregador = precoPizza / 10
+        precoParaCadaPessoa = (precoPizza + taxaEntregador) / pessoasPizza;
+
+
+        precoFinal.innerHTML = "Cada amigo vai colaborar com " + precoParaCadaPessoa.toFixed(2) + "R$, para comer a pizza de " + sabordaPizza + ". Com a taxa de 10% do entragador ja incluida.  ";
+    }
+
+</script>
+
+</html>

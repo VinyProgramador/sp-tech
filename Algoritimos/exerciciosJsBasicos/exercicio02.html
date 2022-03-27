@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 03 Javascript</title>
+ 
+</head>
+<style>
+    .botoes {
+        margin-top: 1%;
+        margin-left: 40%;
+    }
+    .botoes button{
+        border-radius: 5px;
+        border: 1.9px solid #58836d;
+        padding: 8px;
+        outline: 0;
+        background-color: #fff;
+        color: green;
+        transition: all .5s ease-in-out;
+        margin-left: 10px;
+        cursor: pointer;
+
+}
+.botoes button:hover{
+    transform: scale(125%, 125%);
+
+}
+
+</style>
+
+<body>
+
+    <body>
+
+        <div class="botoes">
+            <button onclick="carne()">Carnes</button>
+            <button onclick="legume()">Legumes</button>
+            <button onclick="fruta()">Frutas</button>
+        </div>
+
+
+
+
+    </body>
+
+    <script>
+        function carne() {
+            alert("Gosta de Carnes!")
+            document.title = "Último clique: Botão de Carnes"
+        }
+        function legume() {
+            alert("Gosto so de alguns legumes")
+            document.title = "Último clique: Botão de Legumes"
+        } function fruta() {
+            alert("Gosto muito de frutas!!!!")
+            document.title = "Último clique: Botão de Frutas"
+
+        }
+    </script>
+</body>
+
+</html>

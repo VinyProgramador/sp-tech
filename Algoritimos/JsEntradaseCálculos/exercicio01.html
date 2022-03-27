@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01 JavaScript com entradas.</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+    }
+
+    body {
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    .cabecalho {
+        width: 100%;
+        top: 0 !important;
+        left: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        box-shadow: 2px 5px 10px #555;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #4169e1;
+        color: #fff;
+
+    }
+    .cabecalho input{
+        width: 15%;
+        height: 30px;
+        text-align: center;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        
+
+    }
+
+    .divPrin {
+        width: 30%;
+        top: 40% !important;
+        left: 35% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        box-shadow: 2px 5px 10px #555;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+        background-color: #4169e1;
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    .ButtonSono {
+
+        border: none;
+        outline: none;
+        background-color: darkgreen;
+        color: #f5f5f5;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+    .ButtonSono:hover{
+        background-color: #1a941a;
+        transition: 0.9s;
+        color: #fff;
+
+    }
+</style>
+
+
+
+<body>
+
+    <div class="cabecalho">
+        <h1>Quantas horas você dormiu?</h1>
+        <input type="number" id="horas_dormidas" placeholder="Quantidade de horas"><br><br>
+
+        <button onclick="calcular_sono()" class="ButtonSono">
+            Calcular Sono
+        </button>
+        <br>
+
+    </div>
+    <div id="DivSono" class="divPrin"></div>
+
+
+
+
+
+</body>
+
+<script>
+    function calcular_sono() {
+
+        var sono01 = 0.05 * horas_dormidas.value;
+        var sono02 = 0.45 * horas_dormidas.value;
+        var sono03 = 0.30 * horas_dormidas.value;
+        var sono04 = 0.20 * horas_dormidas.value;
+
+
+        DivSono.innerHTML = sono01 + " Minutos na Fase 1  <br>" + sono02 + " Horas na Fase 2 <br> " + sono03 + " Horas na Fase 3 <br>" + sono04 + " Horas na Fase REM <br>"
+        DivSono.style.height = '30%';
+    }
+</script>

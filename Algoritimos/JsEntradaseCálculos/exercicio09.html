@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09 JavaScript com entradas.</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+    }
+
+    body {
+       background-image: url(img/dbz.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    span{
+        text-align: center;
+    }
+    h1{
+        color: #f5f5f5;
+    }
+    h3{
+        color: #f5f5f5;
+    }
+    input{
+        color: black;
+        outline: 0;
+        border: 0;
+        text-align: center;
+        padding: 4px;
+    }
+    button{
+        padding: 8px;
+        background-color: cadetblue;
+        border-radius: 4px;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        color: #f5f5f5;
+    }
+    button:hover{
+    transform: scale(105%, 105%);
+    }
+</style>
+
+<body>
+    <span>
+    <h1>Dragon-Ball:</h1>
+    <div>
+        <label>
+            Qual seu Ki base? <br>
+            <input type="number" id="PrimeiroKi">
+        </label><br><br>
+    </div>
+
+    <h3><b> Transformar em... </b></h3>
+
+    <div>
+        <button onclick="supersj()">Super saiyajin 1</button>
+
+        <button onclick="supersj2()">Super saiyajin 2</button>
+
+        <button onclick="supersj3()">Super saiyajin 3</button>
+    </div><br>
+
+    <div id="ssj01"></div><br>
+
+
+    <div id="ssj02"></div><br>
+
+
+    <div id="ssj03"></div><br>
+</span>
+</body>
+<html>
+
+
+<script>
+
+    function supersj() {
+
+        var kiTotal = Number((PrimeiroKi.value)) * 50
+        var foto = '<img src = "img/SSJ1.png">'
+
+
+        ssj01.innerHTML = "Após se transformar em SSJ , o ki desse Sayajin passa a ser de " + kiTotal + '<br>' + foto + '<br><br>';
+        ssj01.style.color="#f5f5f5"
+
+    }
+
+
+    function supersj2() {
+
+        var kiTotal = Number((PrimeiroKi.value)) * 100
+        var foto = '<img src = "img/SSJ2.png">'
+
+
+        ssj02.innerHTML = "Após se transformar em SSJ , o ki desse Sayajin passa a ser de " + kiTotal + '<br>' + foto + '<br><br>';
+        ssj02.style.color="#f5f5f5"
+
+    }
+    function supersj3() {
+
+        var kiTotal = Number((PrimeiroKi.value)) * 200
+        var foto = '<img src = "img/SSJ3.png">'
+
+
+        ssj03.innerHTML = "Após se transformar em SSJ , o ki desse Sayajin passa a ser de " + kiTotal + '<br>' + foto + '<br><br>';
+        ssj03.style.color="#f5f5f5"
+
+    }
+
+</script>
+
+</html>

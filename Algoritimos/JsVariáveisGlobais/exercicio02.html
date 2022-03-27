@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 02</title>
+</head>
+
+<body>
+    Informe seu salario: <input id="salario" type="text"><br>
+    <button onclick="confirmarSal()">Confirmar salario</button><br>
+    <button onclick="pagarconta100()">Pagar conta de 100</button><br>
+    <button onclick="pagarconta500()">Pagar conta de 500</button><br>
+    <button onclick="loteria()">Ganhar 2000 na loteria</button><br><br>
+
+    <div>Grana atual: R$
+        <span id="SpanSalarioAtual">0</span>
+    </div>
+
+
+</body>
+<script>
+    var granaAtual = 0
+
+    function confirmarSal() {
+     granaAtual = salario.value
+     SpanSalarioAtual.innerHTML= granaAtual
+
+
+    }
+
+    function pagarconta100() {
+
+        granaAtual=granaAtual - 100
+        SpanSalarioAtual.innerHTML= granaAtual
+
+
+
+
+    }
+
+    function pagarconta500() {
+        granaAtual= granaAtual -500
+        SpanSalarioAtual.innerHTML=granaAtual
+
+
+    }
+    function loteria() {
+      granaAtual=granaAtual+2000
+      SpanSalarioAtual.innerHTML=granaAtual
+
+
+    }
+</script>
+
+</html>

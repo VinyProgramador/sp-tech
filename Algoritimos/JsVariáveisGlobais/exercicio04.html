@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 04</title>
+</head>
+<body>
+    <p style="text-align: center;">
+        <button onclick="esquerda()">Mover p/ Esquerda </button>                                 
+        <button onclick="direita()">Mover p/ Direita</button><br>
+        Quantos pixels <input type="number" id="pixelsInput" placeholder="pixels">
+        <div style="color: #fff;" id="pixelAtual01">0</div>
+        <div style="color: #fff;" id="pixelAtual02">0</div>
+
+    </p>
+
+<p style="text-align: center;">
+    <img style="height: 150px;margin-right:0%;margin-left: 0%;" id="imgBart" src="Bart-simpson-skate.png" alt="">
+</p>
+
+</body>
+<script>
+    function esquerda(){
+        var inputdePixels =Number(pixelsInput.value)
+        var novoPixel = Number(pixelAtual01.innerHTML) + inputdePixels
+        imgBart.style.marginRight = novoPixel + "%"
+        pixelAtual01.innerHTML = novoPixel
+    }
+
+    function direita(){
+        var inputdePixels =Number(pixelsInput.value)
+        var novoPixel = Number(pixelAtual02.innerHTML) + inputdePixels
+        imgBart.style.marginLeft = novoPixel + "%"
+        pixelAtual02.innerHTML = novoPixel
+    }
+</script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 04 Javascript</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+        border: 0;
+    }
+
+    body {
+        padding: 0;
+        border: 0;
+    }
+
+    h1 {
+        font-weight: bolder;
+        color: cadetblue;
+        font-weight: bolder;
+
+    }
+
+    .Divbotoes {
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: center;
+      margin-bottom: 1em;
+    }
+    .Divbotoes button {
+      margin:0.5em;
+    }
+
+    .br {
+        border: none;
+        outline: none;
+        background-color: green;
+        color: #f5f5f5;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bolder;
+
+
+    }
+
+    button:hover {
+        background-color: #59b14d;
+        transition: 0.7s;
+    }
+
+    .ger {
+        outline: none;
+        border: none;
+        background-color: rgb(138, 12, 12);
+        color: #f5f5f5;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    .ger:hover {
+        background-color: rgb(202, 74, 74);
+        transition: 0.7s;
+    }
+    .limpar{
+        outline: none;
+        border: none;
+        background-color: cadetblue;
+        color: #f5f5f5;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+    .limpar:hover {
+        background-color: #b2d5d6;
+        transition: 0.7s;
+    }
+
+    .divTitulo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0.5em;
+    }
+
+    .divTempo {
+        color: #f5f5f5;
+        text-align: center;
+        background-color: cadetblue;
+        width: 200px;
+        height: 20px;
+        margin-left: 18%;
+        border-radius: 8px;
+    }
+
+/* Iterface dos gols */
+.cabecalho{
+  width: 100%;
+  top: 0 !important;
+  left: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: 2px 5px 10px #555;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #999;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 25vh;
+}
+
+#exibGol{
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+#qtdGols{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin: 0 auto;
+  font-size: 1.4em;
+  color: #999;
+  font-style: bold;
+}
+
+.gol{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-style: bold;
+  margin-bottom: 0.5em;
+  box-shadow: 1px 2px 5px #666;
+  border-radius: 8px;
+}
+
+</style>
+
+<body>
+  <div class="cabecalho">
+      <div class="divTitulo">
+          <h1>Brasil Vs Alemanha</h1>
+          <div id="qtdGols"></div>
+      </div>
+      <div class="Divbotoes">
+          <button onclick="Gol('BR')" class="br">Gol do Brasil</button>
+          <button onclick="Gol('AL')" class="ger">Gol da Alemanha</button>
+      </div>
+  </div>
+
+  <div class="container">
+        <div id="exibGol"></div>
+  </div>
+
+</body>
+<script>
+
+    var aqtGolsAlemanha = 0;
+    var aqtGolsBrasil = 0;
+
+    function Gol(selecao,) {
+
+
+      var frase = selecao=='BR' ? 'do Brasil' : 'da Alemanha';
+      selecao=='BR' ? aqtGolsBrasil++ : aqtGolsAlemanha++;
+
+        qtdGols.innerHTML = "Brasil: "+aqtGolsBrasil+ "  -  Alemanha: "+aqtGolsAlemanha;
+        exibGol.innerHTML = exibGol.innerHTML + "<div class='gol'"+"'>Goooooll "+frase+"</div>";
+      
+
+    }
+
+
+</script>
+
+</html>

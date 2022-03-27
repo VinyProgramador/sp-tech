@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerciocio 01</title>
+</head>
+
+<body>
+    <img id="imgSurfista" style="border-radius: 5px;height: 200px;" src="surfista.jpg" alt="">
+    <div style="color: #fff;" id="LarguraAtual">200</div>
+    <br>
+
+    <button onclick="aumentar()">Aumentar a largura</button>
+    <button onclick="diminuir()">Reduzir a altura</button>
+</body>
+
+
+
+
+<script>
+    function aumentar() {
+
+        var novaLargura = Number(LarguraAtual.innerHTML) + 10
+        imgSurfista.style.height = novaLargura + "px"
+        LarguraAtual.innerHTML = novaLargura
+    }
+
+
+    function diminuir() {
+        var novaLargura = Number(LarguraAtual.innerHTML) - 10
+        imgSurfista.style.height = novaLargura + "px"
+        LarguraAtual.innerHTML = novaLargura
+
+    }
+</script>
+
+</html>

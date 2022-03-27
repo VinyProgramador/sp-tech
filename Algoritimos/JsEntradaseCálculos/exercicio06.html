@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09 JavaScript com entradas.</title>
+</head>
+<body>
+    <span style="text-align: center;">
+        <div>
+    Valor passagem <br>
+    <input id="input_valor_passagem" type="text"><br><br>
+    Quantidade de viagens <br>
+     <input id="input_qtd_viagens" type="text"><br><br>
+    Distancia do trabalho <br>
+     <input id="input_distancia" type="text"><br><br>
+    <button onclick="calcularVt()">Calcular VT</button><br><br>
+    <div id="resultado"></div>
+</div>
+</span>
+</body>
+<script>
+    function calcularVt(){
+      var valorPassagem =Number(input_valor_passagem.value)
+      var quantidadeViagens =Number(input_qtd_viagens.value)
+      var distancia = Number(input_distancia.value)
+
+      var qtdUber= quantidadeViagens*0.1
+      var qtdOnibus= quantidadeViagens*0.9
+
+      var custoViagemUber = distancia *0.75
+      var gastoUber = custoViagemUber*qtdUber
+      var gastoOnibus = valorPassagem*qtdOnibus
+
+      resultado.innerHTML = ` Você vai gastar R$ ${gastoOnibus + gastoUber} por mês com transporte.`
+      
+}
+</script>
+</html>

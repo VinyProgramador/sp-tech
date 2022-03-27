@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04 JavaScript com entradas.</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    h1 {
+        text-align: center;
+        color: red;
+    }
+
+    span {
+        text-align: center;
+    }
+    button{
+        background-color: red;
+        outline: 0;
+        border: 0;
+        color: #f5f5f5;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+    button:hover{
+        transform: scale(105%, 105%);
+    }
+    input{
+        outline: 0;
+        border: 1px solid red;
+        color: red;
+        border-radius: 4px;
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Tabuada:</h1>
+        <span>
+            <div>
+                <input id="Numero01" type="number"><br><br>
+                <button onclick="exibirTabuada()">Ver Tabuada</button>
+            </div>
+
+    </div>
+
+    <span style="text-align: center;">
+        <div id="VizualizarTabuada"></div>
+    </span>
+    </span>
+
+</body>
+<script>
+
+    function exibirTabuada() {
+        var num1 = Number((Numero01.value))
+        vx1 = num1 * 1
+        vx2 = num1 * 2
+        vx3 = num1 * 3
+        vx4 = num1 * 4
+        vx5 = num1 * 5
+        vx6 = num1 * 6
+        vx7 = num1 * 7
+        vx8 = num1 * 8
+        vx9 = num1 * 9
+        vx10 = num1 * 10
+
+        VizualizarTabuada.innerHTML = "<span style='text-align:center'><h5>TABUADA DO " +
+            num1 + ":" + "</h5>" + num1 + " x 1 = " + vx1 + "<br>" +
+            num1 + " x 2 = " + vx2 + "<br>" +
+            num1 + " x 3 = " + vx3 + "<br>" +
+            num1 + " x 4 = " + vx4 + "<br>" +
+            num1 + " x 5 = " + vx5 + "<br>" +
+            num1 + " x 6 = " + vx6 + "<br>" +
+            num1 + " x 7 = " + vx7 + "<br>" +
+            num1 + " x 8 = " + vx8 + "<br>" +
+            num1 + " x 9 = " + vx9 + "<br></span>";
+
+
+    }
+
+
+
+</script>
+
+</html>

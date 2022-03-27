@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02 JavaScript com entradas.</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .form {
+        float: left;
+        background-color: cornflowerblue;
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+        box-shadow: 3px 2px 10px #555;
+        border-radius: 5px;
+        margin-left: 40%;
+    }
+
+    .form h3 {
+        font-weight: bolder;
+        color: #fff;
+    }
+
+    .form img {
+        width: 90px;
+        height: 90px;
+        background-color: #fff;
+        margin-bottom: 5%;
+        border-radius: 75px;
+        border: 2px solid #f5f5f5;
+    }
+
+    .form button {
+        outline: 0;
+        border: 0;
+        background-color: #f5f5f5;
+        margin-bottom: 5%;
+        border-radius: 3px;
+        color: black;
+        padding: 5px;
+        cursor: pointer;
+        border: 2px solid #f5f5f5;
+        border: 1px solid #2459bb;
+        transition: all .5s ease-in-out;
+
+
+    }
+
+    .form button:hover {
+        transform: scale(105%, 105%);
+    }
+
+    .form input {
+        border-radius: 3px;
+        color: #3264c2;
+        outline: 0;
+        text-align: center;
+        border: 0;
+    }
+
+    .resultado {
+        background-color: #bcbcbd;
+        color: #f5f5f5;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <div class="form">
+        <h3>Votação:</h3>
+        <img src="img/voto.png" alt="">
+        <div>
+            <input id="candidato01" type="number" placeholder="Candidato 01.">
+            <br><br>
+            <input id="candidato02" type="number" placeholder="Candidato 02.">
+            <br><br>
+            <input id="votosNulos" type="number" placeholder="Votos nulos.">
+        </div>
+        <br>
+        <button onclick="exibirResultado()">Resultado da Eleição</button>
+
+        <div class="resultado" id="Resultado"></div><br>
+
+    </div>
+
+
+
+</body>
+
+
+<script>
+    function exibirResultado() {
+        var c01 = (Number(candidato01.value))
+        var c02 = (Number(candidato02.value))
+        var nul = (Number(votosNulos.value))
+
+        TOTAL = c01 + c02 + nul
+        CA = (c01 / TOTAL) * 100
+        CB = (c02 / TOTAL) * 100
+        NULO = (nul / TOTAL) * 100
+
+        Resultado.innerHTML = "<br>" + "Total de votos: " + "<u>" + TOTAL.toFixed(1) + "</u>" + "<br>" +
+            "<br>Candidato A: " + CA.toFixed(1) + "%  " + "(" + c01 + " Votos)" + "<br><br>" +
+            "Candidato B: " + CB.toFixed(1) + "%  " + "(" + c02 + " Votos)" + "<br><br>" +
+            "Inválidos: " + NULO.toFixed(1) + "%  " + "(" + nul + " Votos)" + "<br><br>";
+
+        Resultado.style.width = "75%"
+
+    }
+</script>
+
+</html>

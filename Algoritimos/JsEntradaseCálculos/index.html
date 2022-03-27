@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ac1 Algoritimos</title>
+</head>
+
+<body>
+    Valor ceneoura:<input id="valorCenoura" type="text"><br>
+    Valor melão:<input id="valorMelao" type="text"><br>
+    Valor filé de peixe:<input id="valorPeixe" type="text"><br>
+    Valor alface:<input id="valorAlface" type="text"><br>
+
+    Quantidade ceneoura:<input id="pesoCenoura" type="text"><br>
+    Quantidade melão:<input id="pesoMelao" type="text"><br>
+    Quantidade filé de peixe:<input id="pesoPeixe" type="text"><br>
+    Quantidade alface:<input id="pesoAlface" type="text"><br>
+
+    <button onclick="Resultado()">#Partiu feira</button><br>
+
+    <div id="chamarResultado"></div>
+
+
+
+
+
+</body>
+<script>
+    function Resultado() {
+        //    valores
+        var cenoura = Number(valorCenoura.value);
+        var melao = Number(valorMelao.value);
+        var peixe = Number(valorPeixe.value);
+        var alface = Number(valorAlface.value);
+
+        Total = cenoura + melao + peixe + alface;
+
+        //    peso
+
+        var ipt1 = Number(pesoCenoura.value)
+        var ipt2 = Number(pesoMelao.value)
+        var ipt3 = Number(pesoPeixe.value)
+        var ipt4 = Number(pesoAlface.value)
+
+        var pesoC = Number(50) * ipt1;
+        var pesoM = Number(150) * ipt2;
+        var pesoP = Number(30) * ipt3;
+        var pesoA = Number(15) * ipt4;
+
+        PesoTotal = (pesoC + pesoM + pesoP + pesoA) * 100
+
+        Desembolsar = Total / 5
+
+        Peso = PesoTotal / 5
+
+        Homem = (PesoTotal / 5)*3
+        Mulher = (PesoTotal / 5)*2
+
+        
+            chamarResultado.innerHTML = "<span style='color:green'>O total da compra  ficou em </span><b>R$" + Total + "</b><span style='color:green'> e com o peso total de</span><b> " + PesoTotal + "Kg</b><br>" +
+            "<span style='color:blue'>Cada um dos 5 amigos terá que desembolsar</span><b> " + Desembolsar + "</b> <span style='color:blue'>e terá que carregar</span> <b>" + Peso + "kg</b> <span style='color:blue'>de peso</span> <br>" +
+            "<span style='color:purple'>Os homens vão carregar </span> <b>" +Homem+"</b>"+ " <span style='color:purple'>de peso e as mulheres</span> <b>"+Mulher+"</b>"
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 04 Javascript</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+        padding: 0;
+    }
+
+    body {
+        padding: 0;
+        border: 0;
+    }
+
+    .divPrincipal {
+        width: 100%;
+        top: 0 !important;
+        left: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        box-shadow: 2px 5px 10px #555;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        color: #999;
+    }
+
+    .botoes {
+        background-color: #000;
+    }
+
+    .botoes button {
+        background-color: cadetblue;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border: 0;
+        outline: 0;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #f5f5f5;
+        display: inline-block;
+    }
+
+</style>
+
+<body>
+    <div class="divPrincipal">
+        <div class="botoes">
+            <button onclick="carne()">Carnes</button>
+            <button onclick="legume()">Legumes</button>
+            <button onclick="fruta()">Frutas</button>
+        </div>
+    </div>
+        <div id="primeiraDiv"></div>
+        <div id="segundaDiv"></div>
+        <div id="terceiraDiv"></div>
+
+</body>
+<script>
+    function carne() {
+        primeiraDiv.innerHTML = "Gosto de Carnes!"
+        primeiraDiv.style.color = "#white"
+        primeiraDiv.style.backgroundColor = "red"
+        primeiraDiv.style.marginBottom = "1%"
+        primeiraDiv.style.width = "500px"
+        primeiraDiv.style.height = "100px"
+        primeiraDiv.style.borderRadius = "5px"
+        primeiraDiv.style.marginTop = "15%"
+        primeiraDiv.style.marginLeft = "32%"
+        primeiraDiv.style.boxShadow = " 2px 5px 10px #555"
+
+        document.title="Último clique: Botão de Carnes"
+    }
+
+    function legume() {
+        segundaDiv.innerHTML = "Gosto apenas de alguns legumes."
+        segundaDiv.style.color = "yellow"
+        segundaDiv.style.backgroundColor = "#000"
+        segundaDiv.style.marginBottom = "1%"
+        segundaDiv.style.width = "500px"
+        segundaDiv.style.height = "100px"
+        segundaDiv.style.borderRadius = "5px"
+        segundaDiv.style.marginLeft = "32%"
+        segundaDiv.style.boxShadow = " 2px 5px 10px #555"
+
+        document.title="Último clique: Botão de Legumes"
+    }
+
+    function fruta() {
+        terceiraDiv.innerHTML = "Gosto muito de frutas!!!!"
+        terceiraDiv.style.color = "green"
+        terceiraDiv.style.backgroundColor = "#fff"
+        terceiraDiv.style.marginBottom = "1%"
+        terceiraDiv.style.width = "500px"
+        terceiraDiv.style.height = "100px"
+        terceiraDiv.style.borderRadius = "5px"
+        terceiraDiv.style.marginLeft = "32%"
+        terceiraDiv.style.boxShadow = " 2px 5px 10px #555"
+
+        document.title="Último clique: Botão de Frutas" 
+    }
+
+
+</script>
+
+</html>

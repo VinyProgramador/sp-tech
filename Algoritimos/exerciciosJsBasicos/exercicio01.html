@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 02 Javascript</title>
+</head>
+<style>
+    .botoes {
+        margin-top: 1%;
+        margin-left: 40%;
+    }
+
+    .botoes button {
+        border-radius: 5px;
+        border: 1.9px solid blueviolet;
+        padding: 8px;
+        outline: 0;
+        background-color: #fff;
+        color: blueviolet;
+        transition: all .5s ease-in-out;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .botoes button:hover{
+    transform: scale(125%, 125%);
+
+}
+</style>
+
+<body>
+    <div class="botoes">
+        <button onclick="pensar()">Pare</button>
+        <button onclick="parar()">Pense</button>
+        <button onclick="seguir()">Siga</button>
+    </div>
+
+</body>
+
+
+<script>
+    function pensar() {
+        alert("Pare e aguarde.")
+    }
+    function parar() {
+        alert("Pense para tomar a melhor decisão.")
+    } function seguir() {
+        alert("Siga em frente!")
+    }
+</script>
+
+</html>
