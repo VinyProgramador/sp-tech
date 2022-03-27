@@ -35,7 +35,7 @@ SELECT NomeHerois FROM herois_dc WHERE NomeHerois LIKE'Su%';
  INSERT INTO herois_Marvel
   (ID,NomeHerois,HqdoHeroi,AnoCriacaoHeroi) 
   VALUES
-('1','Hiomen de ferro','Guerra','2009'),
+('1','Homen de ferro','Guerra','2009'),
 ('2','Capitão America','Homem do USA','1979'),
 ('3','Thanos','O ditador Roxo','1957'),
 ('4','Pantera Negra','Rei de Wakanda','2007'),
