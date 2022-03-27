@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+}
+body{
+    background-color: #000000ed;
+}
+header {
+    margin: 0;
+    width: 100%;
+    height: 13vh;
+    background-color: black;
+    position: fixed;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 2px solid #0cb39c;
+}
+header p {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 2%;
+}
+.formLogin{
+    background-color: #f5f5f5;
+    width: 25%;
+    height: 35vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #0cb39c;
+    filter:drop-shadow(0 0 0.5em #575656);
+    border: 3px solid #0cb39c;
+    border-radius: 5px;
+    
+}
+.formLogin h1{
+    font-size: 25px;
+    margin-bottom: 0.5%;
+    margin-top: 2%;
+}
+.formLogin img{
+    width: 50px;
+    animation: loading 5s infinite;
+    margin-top: 1%;
+}
+@keyframes loading{
+    to{transform: rotate(360deg);}
+}
+.formLogin label{
+     font-family: 'Roboto';
+     font-weight: 600;
+     color: #0cb39c;
+}
+.formLogin input{
+    border:2px solid #0cb39c;
+    margin-top: 1%;
+    outline: 0;
+    width: 30%;
+    border-radius: 3px;
+}
+.formLogin button{
+    outline: 0;
+    padding: 8px;
+    border: none;
+    background-color: #0cb39c;
+    margin-top: 13%;
+    color: #fff;
+    margin-bottom: 5%;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.formLogin button:hover{
+    transform: scale(110%,110%);
+}
+.formLogin p span{
+    color: #0e5c51;
+}
+.formLogin p{
+    color: #0cb39c;
+}
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    text-align: center;
+    background-color: black;
+    color: #f5f5f5;
+    font-weight: bolder;
+    border-top: 2px solid #0cb39c;
+
+}
+
+footer p {
+    margin-top: 1.2%;
+    color: #0cb39c;
+}
