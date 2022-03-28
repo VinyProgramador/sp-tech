@@ -1,0 +1,19 @@
+.divPai{
+    background-color: rgb(200, 162, 200);
+    width: 100%;
+    height: 250px;
+    display:flex;
+    justify-content: space-between
+}
+.divFilha{
+background-color: #ffc0cb;
+width: 250px;
+height:  250px;
+border: 20px solid red;
+margin: 0 auto;
+}
+.divFilha2{
+    background-color: #7fffd4;
+    height: 88%;
+    width: 30%;
+}
