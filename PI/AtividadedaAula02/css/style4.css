@@ -1,0 +1,73 @@
+header{
+    width: 75%;
+    height: 300px;
+    background-color: rgb(182, 147, 127);
+    border: solid 15px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 80%;
+    height: 200px;
+    margin: 30px 30px 30px 30px;
+    border: 20px solid #0f0f8b;
+    color: #0f0f8b;
+    font-size: 27px;
+    font-family: Arial;
+    font-weight: bolder;
+}
+header div p{
+    text-align: center;
+    margin: 85px 0px 0px 0px ;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px;
+}
+.divFilha{
+    background-color: #0f0f8b;
+    width: 95%;
+    height: 30px;
+}
+.divFilha2{
+    background-color: purple;
+    width: 50%;
+    height: 30px;
+
+}
+.divFilha3{
+    background-color: green;
+    width: 80%;
+    height: 30px;
+}
+.divFilha4{
+    background-color: yellow;
+    width: 65%;
+    height: 30px;
+}
+.principal02{
+    display: flex;
+
+}
+.div01{
+    background-color: red;
+    width: 80%;
+    height: 30px; 
+}
+.div02{
+    background-color: darkcyan;
+    width: 50%;
+    height: 30px; 
+}
+.div03{
+    background-color: rgb(143, 194, 67);
+    width: 65%;
+    height: 30px; 
+}
