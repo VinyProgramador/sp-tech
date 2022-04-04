@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+    *{
+        font-family: 'Roboto';
+    }
+
+    input{
+        border: 2px solid #37378b;
+        border-radius: 3px;
+        outline: 0;
+    }
+    button{
+        padding: 7px;
+        background-color: #37378b;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    div img{
+        width: 350px;
+        border-radius: 5px;
+        border: 3px solid #37378b;
+
+    }
+</style>
+<body>
+    temperatura do ambiente <input id="clima" type="text"><br><br>
+    <button onclick="VerificarTemperatura()">Verificar clima</button><br>
+    <div id="resultadoDiv"></div>
+</body>
+
+<script>
+    function VerificarTemperatura(){
+       var temperatura= Number(clima.value)
+
+        if (temperatura<10) {
+            resultadoDiv.innerHTML=`<br><img src="img/1529585127293.webp" alt="">`
+
+        } else {
+        resultadoDiv.innerHTML=`<br><img src="img/mamao_podre_scot_nelson_creative_commons.webp" alt="">`
+
+        }
+    }
+</script>
+</html>

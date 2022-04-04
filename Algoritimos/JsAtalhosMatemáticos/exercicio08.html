@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 08</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    p {
+        font-weight: bolder;
+    }
+
+    button {
+        background-color: blue;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <H1>Recarga cartão fidelidade</H1>
+        <button onclick="oitoPassagens()">08 passagens</button>
+        <button onclick="vintePassagens()">20 passagens</button>
+        <button onclick="cinquentaPassagens()">50 passagens</button><br><br>
+        <div id="ResultadoDiv"></div>
+    </div>
+
+</body>
+
+<script>
+
+    function oitoPassagens() {
+        var qtdPassagens01 = 8
+
+        var valorPago = 32.45
+        var valorQueseriaPago = 35.20
+        var porcentagem = (1-valorPago/valorQueseriaPago)*100
+        var ganhou = (valorQueseriaPago-valorPago)/4.40
+
+        ResultadoDiv.innerHTML = `Ao comprar ${qtdPassagens01} passagens, você pagou  ${porcentagem.toFixed(2)}% a menos. É como se tivesse ganhado ${ganhou.toFixed(1)} passagens de bônus`
+
+    }
+
+    function vintePassagens() {
+        var qtdPassagens02 = 20
+
+        var valorPago = 3.93*20
+        var valorQueseriaPago = 4.40*20
+        var porcentagem = (1-valorPago/valorQueseriaPago)*100
+        var ganhou = (valorQueseriaPago-valorPago)/4.40
+
+        ResultadoDiv.innerHTML = `Ao comprar ${qtdPassagens02} passagens, você pagou ${porcentagem.toFixed(2)}% a menos. É como se tivesse ganhado ${ganhou.toFixed(1)} passagens de bônus`
+    }
+
+    function cinquentaPassagens() {
+        var qtdPassagens03 = 50
+
+        var valorPago = 3.83*50
+        var valorQueseriaPago = 4.40*50
+        var porcentagem = (1-valorPago/valorQueseriaPago)*100
+        var ganhou = (valorQueseriaPago-valorPago)/4.40
+
+        ResultadoDiv.innerHTML = `Ao comprar ${qtdPassagens03} passagens, você pagou ${porcentagem.toFixed(2)}% a menos. É como se tivesse ganhado ${ganhou.toFixed(1)} passagens de bônus`
+    }
+</script>
+
+</html>

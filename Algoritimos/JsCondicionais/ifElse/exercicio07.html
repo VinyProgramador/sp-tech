@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+    *{
+        font-family: 'Roboto';
+    }
+
+    input{
+        border: 2px solid #37378b;
+        border-radius: 3px;
+        outline: 0;
+    }
+    button{
+        padding: 7px;
+        background-color: #37378b;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    div img{
+        width: 350px;
+        border-radius: 5px;
+        border: 3px solid #37378b;
+
+    }
+</style>
+<body>
+    tempo que deixou o arroz cozinhando <input id="InputTempo" type="text"><br><br>
+    <button onclick="provar()">Provar arroz</button><br>
+    <div id="resultadoDiv"></div>
+</body>
+
+<script>
+    function provar(){
+       var tempo = Number(InputTempo.value)
+
+        if (tempo == 5) {
+            resultadoDiv.innerHTML=`<p>Parabéns! Arroz perfeito!</p><img src="img/arrozNormal.jpg" alt="">
+`
+
+        } else {
+            resultadoDiv.innerHTML=`<p>Arroz cru ou cozido demais!</p><img src="img/arrozqueimado.jpg" alt="">`
+
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 07</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    p {
+        font-weight: bolder;
+    }
+
+    button {
+        background-color: blue;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+<div class="container">
+   <p> Qual o valor do carro avista:</p> <input id="Avista"><br><br>
+    <p>Qual a taxa de juros ao mês:</p> <input id="taxa"><br><br>
+    <p>Qual a quantidade de parcelas:</p> <input id="parcelas"><br><br>
+    <button onclick="Calcular()">
+        Calcular prejú
+    </button>
+    <div id="resultadoValores"></div>
+</div>
+
+</body>
+</html>
+<script>
+    function Calcular(){
+        var carroAvista = Number(Avista.value)
+        var taxaCarro = Number(taxa.value)
+        var parcelasCarro = Number(parcelas.value)
+        
+        var quantidade = 1 + (taxaCarro /100)
+        var A = carroAvista / parcelasCarro
+        var progressao= A * (quantidade ** parcelasCarro - 1) / (quantidade - 1)
+
+        var A2 = carroAvista - (carroAvista * 0.2)
+        
+        var carrosComprados = progressao / carroAvista
+
+        resultadoValores.innerHTML = `<p>Seu carro vai sair por um total de R$${progressao.toLocaleString('pt-br', currency = 'BRL')}. Após 1 mês, ele já vai valer só R$${A2.toFixed(2)}. Porque comprou financiado, vai pagar o correspondente a ${carrosComprados.toFixed(1)} carros;</p>`
+    }
+</script>

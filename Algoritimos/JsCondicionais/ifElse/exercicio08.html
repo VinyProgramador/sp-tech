@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    input {
+        border: 2px solid #37378b;
+        border-radius: 3px;
+        outline: 0;
+    }
+
+    button {
+        padding: 7px;
+        background-color: #37378b;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    div img {
+        width: 350px;
+        border-radius: 5px;
+        border: 3px solid #37378b;
+
+    }
+</style>
+
+<body>
+    quantas partidas o atacante jogou: <input id="inputPartidasJogadas" type="text"><br><br>
+    quantos gols marcou: <input id="inputGolsMarcados" type="text"><br><br>
+    <button onclick="verificar()">Estudar atacante</button><br>
+    <div id="resultado"></div>
+    <div id="resultadoImg"></div>
+    <div id="mediaDegolsDiv"></div>
+
+
+    <script>
+
+        function verificar() {
+            var partidas = Number(inputPartidasJogadas.value);
+            var gols = Number(inputGolsMarcados.value);
+            media = gols / partidas;
+
+            if (media >= 0.2) {
+                if (media <= 0.6) {
+                    resultado.innerHTML = '<br> Atacante mediano :/<br><br>';
+                    resultadoImg.innerHTML ='<img src="img/jogadorMedio.jpg" alt="">';
+                }
+                else {
+                    resultado.innerHTML = '<br> Atacante de Futuro :)<br><br>';
+                    resultadoImg.innerHTML ='<img src="img/neymarFeliz.jpg" alt="">';
+
+                }
+            }
+            else {
+                resultado.innerHTML = '<br> Melhor mudar de posição :c <br><br>';
+                resultadoImg.innerHTML ='<img src="img/jogadorRuim.png" alt="">';
+
+            }
+            mediaDegolsDiv.innerHTML = `<br>sua media de gols é de ${media.toFixed(2)}`;
+
+        }
+
+    </script>
+</body>
+
+</html>

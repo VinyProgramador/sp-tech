@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    input {
+        border: 2px solid #37378b;
+        border-radius: 3px;
+        outline: 0;
+    }
+
+    button {
+        padding: 7px;
+        background-color: #37378b;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    Valor da pizza: <input id="valPizza" type="text"><br><br>
+    Quantidade de amigos: <input id="qtdAmigo" type="text"><br><br>
+    Valor que pode ser pago por pessoa: <input id="valorquePodePagar" type="text"><br><br>
+    <button onclick="RolaPizza()">Rola a pizza?</button><br>
+    <div id="ResultadoDiv"></div>
+</body>
+
+<script>
+    function RolaPizza() {
+        var quantidadeAmigos = Number(qtdAmigo.value)
+        var ValordaPizza = Number(valPizza.value);
+        var ValorquePodeSerPago = Number(valorquePodePagar.value)
+
+        var dividirAmigos = ValordaPizza / quantidadeAmigos
+
+        if (dividirAmigos <= ValorquePodeSerPago) {
+            ResultadoDiv.innerHTML = `Uhu! Vamos pedir a pizza!`
+        }
+        else {
+            ResultadoDiv.innerHTML = `Deu ruim! Pizza muito cara!`
+
+        }
+
+    }
+</script>
+
+</html>

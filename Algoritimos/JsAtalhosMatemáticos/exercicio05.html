@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    p {
+        font-weight: bolder;
+    }
+
+    button {
+        background-color: blue;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>Primeiro numero</p> <input id="num01" type="text">
+        <p>Segundo numero</p> <input id="num02" type="text"><br><br>
+        <button onclick="Resultado()">Calcular</button><br><br>
+        <div id="resposta"></div>
+    </div>
+
+</body>
+
+<script>
+    function Resultado() {
+        var n1 = Number(num01.value);
+        var n2 = Number(num02.value);
+
+        conta = n1 ** (1 / n2);
+
+        resposta.innerHTML = `A ${n2} raiz quadrada de ${n1} da: ${conta}`
+
+    }
+</script>
+
+</html>

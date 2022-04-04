@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    div img {
+        width: 350px;
+        height: 350px;
+        border: 5px solid #37378b;
+        border-radius: 10px;
+    }
+
+    input {
+        border: 2px solid #37378b;
+        border-radius: 3px;
+        outline: 0;
+    }
+
+    button {
+        padding: 7px;
+        background-color: #37378b;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="divInput">
+        <label for="inputFreq">
+            Frequencia do aluno: <input id="inputFreq" type="text"><br><br>
+            <button onclick="Resultado()">Analisar frequência</button><br>
+        </label>
+    </div>
+
+    <div id="divResultado"></div>
+
+    <script>
+        function Resultado() {
+            var frequecia = Number(inputFreq.value);
+
+            if (frequecia < 50) {
+                divResultado.innerHTML = `<br><img src="img/turista-em-férias-12725758.jpg" alt="">`
+
+            } else {
+                divResultado.innerHTML = `<br><img src="img/tabela-aluno-senta-se-homework-foto_csp83367014.webp" alt="">`
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 11</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    p {
+        font-weight: bolder;
+    }
+
+    button {
+        background-color: blue;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    
+<div class="container">
+    <p id="DivResultado">
+        Porções de pão francês: <u>0</u><br>
+        Porções de carne boniva: <u>0</u><br>
+        Porções de carne de soja: <u>0</u><br>
+        Porções de arroz com feijão: <u>0</u><br>
+        <b>Total de calorias:</b> <u>0</u><br> 
+    </p>     
+        <Button  onclick="comerPao()">Comer um pão francês</Button><br><br>
+        <Button  onclick="comerCarne()">Comer porção de carne boniva</Button><br><br>
+        <Button  onclick="comerSoja()">Comer porção de carne de soja</Button><br><br>
+        <Button  onclick="comerArrozFeijao()">Comer porção de arroz com feijão</Button><br><br>
+        <Button  onclick="recomecar()">Recomeçar</Button><br>
+</div>
+
+
+    
+
+    <script>
+     var totalCalorias = 0;
+
+     var totalPao=0;
+     var totalCarne = 0;
+     var totalSoja = 0;
+     var totalArrozFeijao=0;
+
+    var TotalCalorias = 0;
+
+     
+
+     function comerPao(){
+        totalPao ++
+        TotalCalorias+= 50;
+        DivResultado.innerHTML=` Porções de pão francês: <u>${totalPao}</u><br>
+        Porções de carne boniva: <u>${totalCarne}</u><br>
+        Porções de carne de soja: <u>${totalSoja}</u><br>
+        Porções de arroz com feijão: <u>${totalArrozFeijao}</u><br>
+        <b>Total de calorias:</b> <u>${TotalCalorias}</u><br>`
+      
+    }
+    
+    function comerCarne(){
+        totalCarne ++
+        TotalCalorias+= 100;
+        DivResultado.innerHTML=` Porções de pão francês: <u>${totalPao}</u><br>
+        Porções de carne boniva: <u>${totalCarne}</u><br>
+        Porções de carne de soja: <u>${totalSoja}</u><br>
+        Porções de arroz com feijão: <u>${totalArrozFeijao}</u><br>
+        <b>Total de calorias:</b><u>${TotalCalorias}</u><br>`
+
+    }
+    function comerSoja(){
+        totalSoja++
+        TotalCalorias+= 30;
+        DivResultado.innerHTML=` Porções de pão francês: <u>${totalPao}</u><br>
+        Porções de carne boniva: <u>${totalCarne}</u><br>
+        Porções de carne de soja: <u>${totalSoja}</u><br>
+        Porções de arroz com feijão: <u>${totalArrozFeijao}</u><br>
+        <b>Total de calorias:</b> <u>${TotalCalorias}</u><br>`
+    }
+    function comerArrozFeijao(){
+        totalArrozFeijao++
+        TotalCalorias+= 120;
+        DivResultado.innerHTML=` Porções de pão francês: <u>${totalPao}</u><br>
+        Porções de carne boniva: <u>${totalCarne}</u><br>
+        Porções de carne de soja: <u>${totalSoja}</u><br>
+        Porções de arroz com feijão: <u>${totalArrozFeijao}</u><br>
+        <b>Total de calorias:</b> <u>${TotalCalorias}</u><br>`
+    }
+    function recomecar(){
+        totalPao=0;
+        totalCarne = 0;
+        totalSoja = 0;
+        totalArrozFeijao=0;
+        TotalCalorias = 0;
+        DivResultado.innerHTML=` Porções de pão francês: <u>${totalPao}</u><br>
+        Porções de carne boniva: <u>${totalCarne}</u><br>
+        Porções de carne de soja: <u>${totalSoja}</u><br>
+        Porções de arroz com feijão: <u>${totalArrozFeijao}</u><br>
+        <b>Total de calorias:</b> <u>${TotalCalorias}</u><br>`
+    }
+    </script>
+</body>
+
+</html>

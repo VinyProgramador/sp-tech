@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+    *{
+        font-family: 'Roboto';
+    }
+
+    input{
+        border: 2px solid #37378b;
+        border-radius: 3px;
+        outline: 0;
+    }
+    button{
+        padding: 7px;
+        background-color: #37378b;
+        color: #fff;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    saldo da conta do usuário <input id="inputSaldodoUsuario" type="text"><br><br>
+    valor do débito <input id="inputValorDebito" type="text"><br><br>
+    <button onclick="Analisar()">Analisar conta</button><br><br>
+    <div id="resultadoDiv"></div>
+</body>
+
+<script>
+    function Analisar() {
+        var valorSaldo= Number(inputSaldodoUsuario.value);
+        var valorDebito= Number(inputValorDebito.value);
+        saldoFinal= valorSaldo-valorDebito
+
+    
+    if (saldoFinal <0) {
+        resultadoDiv.innerHTML = `<b style="color:red;">o saldo atual da conta corrente é ${saldoFinal.toFixed(2)}</b>`
+
+    } else {
+        resultadoDiv.innerHTML = `<i style="color:blue;">o saldo atual da conta corrente é ${saldoFinal.toFixed(2)}</i>`
+
+    }
+}
+</script>
+
+</html>

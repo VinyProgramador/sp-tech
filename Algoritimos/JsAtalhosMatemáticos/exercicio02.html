@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 02</title>
+</head>
+<body>
+    Digite o raio: <input id="idRaio" type="text"><br><br>
+    <button onclick="Calcular()">Calcular Área</button><br><br>
+    <div id="divResultado"></div>
+</body>
+
+<script>
+    function Calcular(){
+        var raio = Number(idRaio.value)
+
+        Resultado=  3.14 * (raio*raio);
+
+        divResultado.innerHTML=`A circuferencia é ${Resultado} `
+    }
+</script>
+</html>

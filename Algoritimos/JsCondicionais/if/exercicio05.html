@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Primeira nota: <input id="primeira" type="text"><br><br>
+    Segunda nota: <input id="segunda" type="text"><br><br>
+    Terceira nota: <input id="terceira" type="text"><br><br>
+    <button onclick="Analisar()">Analisar desempenho</button><br>
+    <div id="DivResultado"></div>
+</body>
+
+<script>
+function Analisar(){
+    var prmNota= Number(primeira.value);
+    var segNota= Number(segunda.value);
+    var terNota= Number(terceira.value);
+
+    notaFinal = (prmNota+segNota+terNota)/3;
+
+    DivResultado.innerHTML=`Sua media é de ${notaFinal.toFixed(2)}`
+    if(notaFinal>9.4){
+        DivResultado.innerHTML=`Parabéns, você é fora de série! ${notaFinal.toFixed(2)}`
+
+    }
+}
+</script>
+</html>

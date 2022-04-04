@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 06</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    * {
+        font-family: 'Roboto';
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    p {
+        font-weight: bolder;
+    }
+
+    button {
+        background-color: blue;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        padding: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+ <div class="container">
+    <p>1º número da progressão:</p> <br> <input id="idNumPro" type="number">
+    <p>Digite a Razão:</p> <br> <input id="idRazao" type="number">
+    <p>número (termo) da progressão deseja ver:</p><input id="Idtermo" type="number"><br><br>
+    <button onclick="ResultadoPg()">Calcular PG</button>
+    <div id="divResultadoPg"></div>
+ </div>
+</body>
+
+<script>
+
+    function ResultadoPg() {
+        var PrimeiroNumero = Number(idNumPro.value);
+        var razao = Number(idRazao.value);
+        var termo = Number(Idtermo.value);
+
+        resultado = PrimeiroNumero * razao ** (termo - 1)
+
+        divResultadoPg.innerHTML = `O <b>${termo}º</b> termo nessa PG será <b>${resultado}</b>`
+    }
+</script>
+
+</html>
