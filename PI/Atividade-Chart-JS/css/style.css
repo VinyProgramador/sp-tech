@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+
+nav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #3d78bb;
+    border-top-right-radius: 5px;
+
+
+}
+.imgUsuario{
+    background-color: #f5f5f5;
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+
+nav a {
+    color: #f5f5f5;
+    font-size: 20px;
+    display: block;
+    margin-top: 55px;
+    margin-left: 25px;
+}
+.agora{
+    filter: drop-shadow(0 0 2px #3bf502);
+
+}
+
+
+h2 {
+    color: #122a46;
+    text-align: center;
+    margin: 45px 0px 5px 0px;
+}
+.corpoDosGraficos{
+    margin-left: 150px;
+}
+.container {
+    max-width: 1330px;
+    margin-left: 105px;
+    display: flex;
+    flex-wrap: wrap;
+    filter: drop-shadow(0 0 0.2em #929294);
+    margin-top: 10px;
+
+}
+
+.container div {
+    flex: 1 1 350px;
+    margin: 5px;
+    background-color: #fff;
+    width: 85%;
+    height: 350px;
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.container02 {
+    max-width: 1330px;
+    margin-left: 105px;
+    display: flex;
+    flex-wrap: wrap;
+    filter: drop-shadow(0 0 0.2em #929294);
+
+}
+
+.container02 div {
+    flex: 1 350px;
+    margin: 5px;
+    background-color: #fff;
+    width: 85%;
+    height: 350px;
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
