@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-06</title>
+</head>
+<body>
+<label for="formaPagamento">Forma de pagamento:
+    <select name="" id="formaPagamento">
+        <option value="dinheiro">Dinheiro</option>
+        <option value="débito">Cartão de débito</option>
+        <option value="crédito">Cartão de crédito</option>
+        <option value="boleto">Boleto</option>
+    </select>
+</label>
+<br>
+    <button onclick="Verificar()">Analisar compra</button>
+</body>
+
+<script>
+    function Verificar(){
+        if (formaPagamento.value =='dinheiro' || formaPagamento.value =='débito') {
+            alert('Você terá que pagar a vista')
+        } else {
+            alert('Pagamento poderá ser parcelado')
+
+        }
+    }
+</script>
+</html>

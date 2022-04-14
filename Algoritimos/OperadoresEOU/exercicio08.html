@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-08</title>
+</head>
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        font-family: monospace;
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 6px;
+        background-color: blue;
+        color: #fff;
+        border: none;
+        outline: 0;
+        border-radius: 2px;
+        cursor: pointer;
+        
+    }
+</style>
+
+<div>
+
+    <body>
+        <p>Nome da empresa:</p> <input type="text" id="inputNomeEmpresa"><br>
+        <p>Valor da bolsa da empresa:</p> <input type="text" id="inputValorBolsa"><br>
+        <p>Valor do VR da empresa:</p> <input type="text" id="inputValorVr"><br>
+        <p>Tempo de deslocamento:</p> <input type="text" id="inputTempoDeslocamento">
+        <br>
+        <button onclick="Verificar()">É preferida?</button><br>
+        <div id="ResultadoDiv"></div>
+</div>
+</body>
+
+<script>
+    function Verificar() {
+        var nomeEmpresa = (inputNomeEmpresa.value);
+        var valorBolsa = Number(inputValorBolsa.value);
+        var valorVr = Number(inputValorVr.value);
+        var tempoDeslocamento = Number(inputTempoDeslocamento.value);
+
+        if (valorBolsa >= 1800 || valorVr >= 20 || tempoDeslocamento <= 30) {
+            ResultadoDiv.innerHTML = `A empresa ${nomeEmpresa} é uma de suas preferências`
+        } else {
+            ResultadoDiv.innerHTML = `A empresa ${nomeEmpresa} está fora da sua lista`
+
+        }
+    }
+</script>
+
+</html>

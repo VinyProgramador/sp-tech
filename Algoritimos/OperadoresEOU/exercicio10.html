@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-10</title>
+</head>
+<body>
+<div id="desaparecer">
+    Temperatura: <input type="number" id="inputTemperatura"><br>
+    Umidade do Ar: <input type="number" id="inputUmidade"><br><div>
+    <button onclick="Avaliar()">Avaliar clima</button>
+</div>
+</body>
+<script>
+    function Avaliar(){
+        var temperatura = Number(inputTemperatura.value);
+        var umidade = Number(inputUmidade.value);
+
+        if (umidade>=100 || umidade<=0) {
+            alert('Valor de umidade inválido');
+            desaparecer.innerHTML=' '
+
+        } else if(temperatura>=22<=23 && umidade<=60) {
+            alert('Clima agradável');
+        }
+        else{
+            alert('Clima desconfortável');
+        }
+    }
+</script>
+</html>

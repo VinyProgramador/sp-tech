@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-03</title>
+</head>
+
+<body>
+
+    Temperatura do ambiente: <input type="text" id="inputTemperatura"><br>
+    <button onclick="resultado()">Medir conforto</button><br>
+    <div id="resultadoDiv"></div>
+</body>
+
+<script>
+    function resultado() {
+        var temperatura= Number(inputTemperatura.value)
+
+
+        if (temperatura>=22<=23) {
+            resultadoDiv.innerHTML=`Temperatura confortável`
+        }
+        else{
+            resultadoDiv.innerHTML=`Temperatura não está confortável`
+
+        }
+    }
+</script>
+
+</html>

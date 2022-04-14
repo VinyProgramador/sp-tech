@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-11</title>
+</head>
+<style>
+    div {
+        flex-direction: column;
+    }
+
+    p {
+        font-family: monospace;
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 6px;
+        background-color: blue;
+        color: #fff;
+        border: none;
+        outline: 0;
+        border-radius: 2px;
+        cursor: pointer;
+        
+    }
+</style>
+<body>
+
+<div>
+    <label for="opcoesTv"><p>Opções de televisao:</p>
+        <select id="opcoesTv">
+            <option value="Samsung">Samsung</option>
+            <option value="LG">LG</option>
+            <option value="Mondial">Mondial</option>
+            <option value="Britania">Britânia</option>
+        </select><br>
+    </label>
+    <p>preço da televisão:</p> <input type="number" id="inputPrecoTv"><br><br>
+    <button onclick="Verificar()">Analisar compra</button><br><br>
+    <div id="ResultadoDiv"></div>
+</body>
+</div>
+
+
+<script>
+    function Verificar() {
+        var precoTv = Number(inputPrecoTv.value);
+
+        if (precoTv < 800 || precoTv > 2000) {
+            ResultadoDiv.innerHTML = `TV fora da faixa de preço`
+             if(precoTv<800){
+                ResultadoDiv.innerHTML = `TV fora da faixa de preço<br>Preço baixo demais!`
+            }
+            if(precoTv>2000){
+                ResultadoDiv.innerHTML = `TV fora da faixa de preço!<br>TV cara demais, infelizmente.`
+            }
+        }
+        else if (precoTv >= 800 && precoTv <= 2000 && opcoesTv.value == 'Mondial' || opcoesTv.value == 'Britania') {
+            ResultadoDiv.innerHTML = `Na faixa de preço, porém marca não confiável`
+        }
+        else{
+            ResultadoDiv.innerHTML = `Essa TV pode entrar na sua lista`
+
+        }
+    }
+</script>
+
+</html>

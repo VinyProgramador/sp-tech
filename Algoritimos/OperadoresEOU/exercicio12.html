@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-12</title>
+</head>
+<body>
+<div id="divDesaparecer">
+    nota do aluno: <input type="number" id="inputNotaAluno"><br>
+    frequência do aluno: <input type="number" id="inputFreqAluno"><br>
+    <button onclick="Analisar()">Analisar aluno</button><br>
+    <div id="resultadoDiv"></div>
+</div>
+</body>
+
+<script>
+    function Analisar(){
+        var notaAluno= Number(inputNotaAluno.value);
+        var freqAluno = Number(inputFreqAluno.value);
+
+        if (notaAluno<0 || notaAluno >10) {
+            alert('Onde já se viu nota <0 ou >10?!');
+                divDesaparecer.innerHTML=' '
+
+        }
+        else if(freqAluno<0 ||freqAluno >100){
+
+            alert('Onde já se viu frequencia <0 ou >10?!');
+                divDesaparecer.innerHTML=' '    
+        }
+        else if(notaAluno <6){
+            resultadoDiv.innerHTML='Aluno ficou abaixo da média'
+        }
+            else if(notaAluno <8){
+                resultadoDiv.innerHTML='Aluno ficou na média'
+            }
+            else if(notaAluno >8.1){
+                resultadoDiv.innerHTML='Aluno acima da média'
+            }
+            else if(freqAluno>=75){
+                resultadoDiv.innerHTML='Aluno aprovado por frequência'
+
+            }
+            else{
+                resultadoDiv.innerHTML='Aluno reprovado por frequência'
+
+            }
+        
+    }
+</script>
+</html>

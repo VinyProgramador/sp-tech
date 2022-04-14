@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-01</title>
+</head>
+<body>
+    idade: <input type="text" id="InputIdade"><br><br>
+    peso do usuario: <input type="text" id="IdPeso"><br><br>
+    <button onclick="Resultado()">Pode brincar?</button>
+    <div id="ResultadoDiv"></div>
+</body>
+
+<script>
+   function Resultado(){
+   
+    var idade = Number(InputIdade.value);
+    var peso = Number(IdPeso.value);
+ 
+    if (idade>15 && peso<100) {
+        ResultadoDiv.innerHTML=`Você poderá brincar!`
+    }
+    else{
+        ResultadoDiv.innerHTML=`Você não poderá brincar!`
+    }
+}
+</script>
+</html>

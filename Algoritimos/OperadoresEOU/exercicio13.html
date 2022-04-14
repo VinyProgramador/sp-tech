@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-13</title>
+</head>
+<style>
+    div {
+        flex-direction: column;
+    }
+
+    p {
+        font-family: monospace;
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 6px;
+        background-color: blue;
+        color: #fff;
+        border: none;
+        outline: 0;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    img {
+        width: 20%;
+        height: 55px;
+    }
+</style>
+
+<body>
+    <div>
+        <p>Avaliação:</p> <input id="inputNota"><br><br>
+        <button onclick="avaliarNota()">Avaliar</button><br><br>
+        <div id="divResultadoAvaliacao"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function avaliarNota() {
+        var avaliacao = Number(inputNota.value)
+
+        if (avaliacao < 0 || avaliacao > 5) {
+            alert("Nota inválida. Digite de 0 a 5")
+        } else {
+            if (avaliacao < 0.5) {
+                divResultadoAvaliacao.innerHTML = `<img src="zero.PNG">`
+            } else if (avaliacao < 1) {
+                divResultadoAvaliacao.innerHTML = `<img src="meia.PNG">`
+            } else if (avaliacao < 1.5) {
+                divResultadoAvaliacao.innerHTML = `<img src="uma.PNG">`
+            } else if (avaliacao < 2) {
+                divResultadoAvaliacao.innerHTML = `<img src="umaEmeia.PNG">`
+            } else if (avaliacao < 2.5) {
+                divResultadoAvaliacao.innerHTML = `<img src="duas.PNG">`
+            } else if (avaliacao < 3) {
+                divResultadoAvaliacao.innerHTML = `<img src="duasEmeia.PNG">`
+            } else if (avaliacao < 3.5) {
+                divResultadoAvaliacao.innerHTML = `<img src="tres.PNG">`
+            } else if (avaliacao < 4) {
+                divResultadoAvaliacao.innerHTML = `<img src="tresEmeia.PNG">`
+            } else if (avaliacao < 4.5) {
+                divResultadoAvaliacao.innerHTML = `<img src="quatro.PNG">`
+            } else if (avaliacao < 5) {
+                divResultadoAvaliacao.innerHTML = `<img src="quatroEmeia.PNG">`
+            } else if (avaliacao == 5) {
+                divResultadoAvaliacao.innerHTML = `<img src="cinco.PNG">`
+            }
+        }
+    }
+
+</script>

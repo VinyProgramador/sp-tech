@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-09</title>
+</head>
+<style>
+    .div01 {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        font-family: monospace;
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 6px;
+        background-color: blue;
+        color: #fff;
+        border: none;
+        outline: 0;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-left: 45px;
+        
+    }
+    img{
+        height: 300px;
+        border-radius: 10px;
+        filter: drop-shadow( 0 0 2px #9e9fa0);
+    }
+</style>
+<body>
+<div class="div01">
+    <label for="tipoArroz">Tipo de Arroz
+        <select id="tipoArroz">
+            <option value="integral ">integral</option>
+            <option value="branco">branco</option>
+        </select><br>
+        <p>tempo de cozimento:</p> <input type="number" id="inputTempodeCozimento"><br>
+        <p>quantidade de sal usada:</p> <input type="number" id="inputQtdSal"><br><br>
+        <button onclick="avaliarArroz()">Avaliar arroz</button>
+    </label><br>
+    <div id="ResultadoDiv"></div>
+</div>
+<script>
+    function avaliarArroz(){
+        var TipodeArroz=(tipoArroz.value);
+        var tempo=Number(inputTempodeCozimento.value);
+        var sal=Number(inputQtdSal.value);
+
+        if ((TipodeArroz=='branco' &&tempo==10 && sal<=10) || (TipodeArroz=='integral' &&tempo==20 && sal<=15)) {
+            ResultadoDiv.innerHTML='Arroz perfeito<br>'            
+            if(TipodeArroz=='integral')
+            ResultadoDiv.innerHTML='<br><img src="arrozIntegral.png" alt="">'            
+            else{
+                ResultadoDiv.innerHTML='<br><img src="arroz-branco.jpg" alt="">'            
+            }
+
+        }
+        else{
+            ResultadoDiv.innerHTML='<br><img src="vergonha.webp" alt="">'            
+        }
+
+    }
+ 
+</script>
+</body>
+</html>
