@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Limite inferior:<input id="inputInferior" type="number"><br>
+    Limite superior:<input id="inputSuperior" type="text"><br>
+    Numero para testar divibilidade: <input id="inputNumDivisor" type="text"><br>
+    <button onclick="Resultado()">Contar</button><br>
+    <div id="divResultado"></div>
+
+</body>
+</html>
+<script>
+    function Resultado(){
+        var superior= Number(inputSuperior.value);
+        var inferior= Number(inputInferior.value);
+        var divisor = Number(inputNumDivisor.value)
+
+        if(inferior<2){
+            divResultado.innerHTML="Digite um valor maior que 1."
+        }
+            else if(superior>=100){
+                divResultado.innerHTML="Digite um valor menor que 100."
+            }
+
+            else if(divisor<3|| divisor>10){
+                 
+                divResultado.innerHTML="número divisivel tem que estar entre 3 e 10"
+            }
+
+            else{
+                for(contador=inferior; contador<=superior;contador++){
+
+                    if (contador% divisor == 0) {
+                        divResultado.innerHTML+=`${contador}<br>`
+                    }
+                }
+            }
+    }
+</script>

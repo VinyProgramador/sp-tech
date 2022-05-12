@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantidade de Mundiais da FIFA do seu clube: <input id="inputQtdTitulos" type="number"><br>
+    <button onclick="resultado()">
+        Ver troféus de mundiais FIFA
+    </button><br>
+    <div id="divImg"></div>
+</body>
+</html>
+<script>
+    function resultado(){
+        var trofeus = Number(inputQtdTitulos.value)
+        var contador=1
+       if(trofeus<=0){
+        divImg.innerHTML+='    <img src="chorando.jpeg" alt=""><br>'
+       }
+       else{
+           while (contador<=trofeus) {
+            divImg.innerHTML+='<img src="trofeu-removebg-preview.png" alt="foto de um trofeu da fifa."><br>'
+            contador++
+           }
+       }
+    }
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+    <!-- Rua A -->
+    <label for="ruaA">Rua A
+        <select id="ruaA">
+            <option value="0">Parado</option>
+            <option value="1">Andando</option>
+        </select>
+    </label>
+    <!-- Rua B -->
+    <label for="ruaB">Rua B
+        <select id="ruaB">
+            <option value="0">Parado</option>
+            <option value="1">Andando</option>
+        </select>
+    </label><br><br>
+    <button onclick="Verificar()">Verificar</button><br>
+    <div id="divResultado"></div>
+</body>
+
+
+
+<script>
+    function Verificar(){
+
+        var  opcaoA=Number(ruaA.value);
+        var opcaoB=Number(ruaB.value);
+
+        if (opcaoA ==1 && opcaoB==1) {
+            divResultado.innerHTML='Risco de Colisão';
+        }
+        else if(opcaoA ==0 && opcaoB==0){
+            divResultado.innerHTML='Risco de engarrafamento';
+
+        }
+        else{
+            divResultado.innerHTML='Fluxo perfeito';
+
+        }
+    }
+
+
+    // Porta XOR
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="estacao">Ver estação:</label>
+
+<select name="estacoes" id="estacao">
+<option value="janeiro">janeiro</option>
+  <option value="fevereiro">fevereiro</option>
+  <option value="março">março</option>
+  <option value="abril">abril </option>
+  <option value="maio">maio</option>
+  <option value="junho">junho</option>
+  <option value="julho">julho </option>
+  <option value="agosto">agosto</option>
+  <option value="setembro">setembro</option>
+  <option value="outubro">outubro</option>
+  <option value="novembro">novembro</option>
+  <option value="dezembro">dezembro</option><br>
+</select><br>
+<button onclick="Resultado()">Ver estação</button>
+<div id="RespostaDiv"></div>
+<script>
+    
+    function Resultado(){
+        var select = document.getElementById('estacao');
+        var value = select.options[select.selectedIndex].value;
+
+       if (value == 'janeiro') {
+        RespostaDiv.innerHTML=`Inverno <br><img src="inverno.jpg" alt="">`
+
+       }
+       
+       else if(value == 'fevereiro'){
+        RespostaDiv.innerHTML=`Inverno <br><img src="inverno.jpg" alt="">`
+
+       }
+       else if(value == 'março'){
+        RespostaDiv.innerHTML=`primavera <br> <img src="primavera.jpg" alt="">`
+
+       }
+       else if(value == 'abril'){
+        RespostaDiv.innerHTML=`primavera <br> <img src="primavera.jpg" alt="">`
+
+       }
+       else if(value == 'maio'){
+        RespostaDiv.innerHTML=`primavera <br> <img src="primavera.jpg" alt="">`
+
+       }
+       else if(value == 'junho'){
+        RespostaDiv.innerHTML=`verão <br> <img src="verao.jpg" alt="">`
+
+       }
+       else if(value == 'julho'){
+        RespostaDiv.innerHTML=`verão <br> <img src="verao.jpg" alt="">`
+
+       }
+       else if(value == 'agosto'){
+        RespostaDiv.innerHTML=`verão <br> <img src="verao.jpg" alt="">`
+
+       }
+       else if(value == 'setembro'){
+        RespostaDiv.innerHTML=`outono <br> <img src="outono.jpg" alt="">`
+
+       }
+       else if(value == 'outubro'){
+        RespostaDiv.innerHTML=`outono <br> <img src="outono.jpg" alt="">`
+
+       }
+       else if(value == 'n  ovembro'){
+        RespostaDiv.innerHTML=`outono <br> <img src="outono.jpg" alt="">`
+
+       }
+       else{
+        RespostaDiv.innerHTML=`outono <br> <br><img src="inverno.jpg" alt="">`
+
+       }
+    }
+
+
+</script>
+</body>
+</html>

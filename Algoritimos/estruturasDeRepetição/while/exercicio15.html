@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de elefantes <input type="text" id="limite">
+    <button onclick="resultado()">Repetir</button><br><br>
+    <div id="divResultado"></div>
+    <img src="" alt="">
+</body>
+</html>
+
+<script>
+    var contador = 2;
+
+    function resultado() {
+        var texto = "";
+        while (contador <= Number(limite.value)) {
+            texto += "incomodam, "
+            divResultado.innerHTML += `1 elefante incomoda muita gente!<br>
+            ${contador} elefantes ${texto} incomodam muito mais!<br><br>`
+
+            contador++
+        }
+    }
+</script>   

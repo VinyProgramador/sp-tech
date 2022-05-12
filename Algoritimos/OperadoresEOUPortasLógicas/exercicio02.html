@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    <!-- Convidados A-->
+    <label for="convidadosA">Convidados A
+        <select id="convidadosA">
+            <option value="0">Carnes e derivados de animais</option>
+            <option value="1">Apenas opções veganas</option>
+        </select>
+    </label>
+
+    <!-- Convidados B-->
+    <label for="convidadosB">Convidados B
+        <select id="convidadosB">
+            <option value="0">Carnes e derivados de animais</option>
+            <option value="1">Apenas opções veganas</option>
+        </select>
+    </label><br><br>
+    <button onclick="Verificar()">Verificar</button><br>
+    <div id="divResultado"></div>
+
+
+
+    <script>
+        function Verificar(){
+            var  opcaoA=Number(convidadosA.value);
+        var opcaoB=Number(convidadosB.value);
+
+        if(opcaoA == 1 && opcaoB ==1){
+            divResultado.innerHTML='Ótimo ! Taxa de sucesso de 100%';
+
+        }
+        else if(opcaoA == 0 && opcaoB ==0){
+            divResultado.innerHTML='Tá tudo liberado ! Taxa de sucesso de 100%';
+
+        }
+        else{
+            divResultado.innerHTML='Probabilidade de fracasso de 100%';
+
+        }
+        }
+    </script>
+    
+</body>
+<!-- Porta XNOR -->
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="resultado()">
+        testar bibilhoteca ramdom
+    </button><br>
+    <div id="testeImg"></div>
+</body>
+</html>
+<script>
+    function resultado(){
+ 
+        var img1 ='<img src="chorando.jpeg" alt="">'
+        var img2 ='<img src="trofeu-removebg-preview.png" alt="">'
+
+        varTest=parseInt((Math.random() * 2) + 1);
+
+        if (varTest==1) {
+            testeImg.innerHTML=`${img1}`
+        } else {
+            testeImg.innerHTML=`${img2}`
+
+        }
+}
+</script>

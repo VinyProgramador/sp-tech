@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Url da img <input id="inputIUrl" type="text"><br>
+    Quantas imagens exibir <input id="inputQtdImg" type="text"><br>
+    Quantas imagens por linha <input id="inputImgPorLinha" type="text"><br>
+    <button onclick="resultado()">
+        Ver imagens
+    </button><br>
+    <div id="divImg"></div><br>
+    <div id="Divfinal"></div>
+</body>
+</html>
+<script>
+    function resultado(){
+
+    var qtdImg = Number(inputQtdImg.value);    
+    var url= inputIUrl.value;
+    var imgPorLinha= Number(inputImgPorLinha.value)
+    var img= '<img style="width: 250px; height: 250px;" src="'+url+'" alt="">'
+    var divs =`divImg.innerHTML+=img`
+
+    for(contador=1;contador<=qtdImg;contador++){
+            
+        if(contador% imgPorLinha ==0){
+
+            divImg.innerHTML+=img
+        
+        }
+        
+    }
+}
+</script>

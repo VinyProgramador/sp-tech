@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+        <!-- posições do candidato A-->
+        <label for="frequentadorA">frequentador A
+            <select id="frequentadorA">
+                <option value="0">Não irei neste fim de semana</option>
+                <option value="1">Irei neste fim de semana</option>
+            </select>
+        </label>
+    
+        <!-- posições do candidato A-->
+        <label for="posiçõesB">frequentador B
+            <select id="frequentadorB">
+                <option value="0">Não irei neste fim de semana</option>
+                <option value="1">Irei neste fim de semana</option>
+            </select>
+        </label><br><br>
+        <button onclick="Verificar()">Checar aglomeração</button><br>
+        <div id="divResultado"></div>
+    
+</body>
+<script>
+        function Verificar() {
+        var FrqA = Number(frequentadorA.value);
+        var FrqB= Number(frequentadorB.value);
+
+        if (FrqA == 0 && FrqB == 1) {
+            divResultado.innerHTML = 'Há risco de aglomeração, 50% das pessoas estarão no parque';
+
+        }
+        else if (FrqA == 1 && FrqB == 0) {
+            divResultado.innerHTML = 'Há risco de aglomeração, 50% das pessoas estarão no parque';
+        }
+        else if (FrqA == 1 && FrqB == 1) {
+            divResultado.innerHTML = 'Risco ALTO de aglomeração, 100% de ocupação';
+        }
+        else {
+            divResultado.innerHTML = 'Risco 0 de aglomeração, perfeito sorriso';
+
+        }
+}
+
+// Porta And
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Faz musculação de quantos em quantos dias?: <input id="qtdDias" type="number"><br>
+    <button onclick="resultado()">
+        Exibir rotina mensal
+    </button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+    function resultado(){
+        var dias = Number(qtdDias.value);
+        var contador = 0;
+
+        while(contador<=30){
+            if(contador % dias == 0 ){
+                divResultado.innerHTML+='musculação<br>'
+            }
+            else{
+                divResultado.innerHTML+='comer dormir etc.<br>'
+            }
+            contador++
+        }
+    }
+</script>

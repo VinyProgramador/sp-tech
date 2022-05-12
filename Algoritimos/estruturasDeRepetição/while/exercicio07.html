@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Numero de 20 a 100:<input id="numInput" type="number"><br>
+    <button onclick="resultado()">
+        Adoro múltiplos de 5
+    </button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+    function resultado(){
+        var num = Number(numInput.value);
+
+        while(num<=100){
+
+            if(num<=20 || num>=100){
+            }
+            else{
+                divResultado.innerHTML+=`${num}<br>`
+                num+=5
+            }
+        }
+    }
+</script>

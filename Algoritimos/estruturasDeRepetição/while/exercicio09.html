@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite um numero: <input id="inputNumero" type="number"><br>
+    Digite uma frase: <input id="inputFrase" type="text"><br>
+    <button onclick="resultado()">
+        Papagaio
+    </button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+    function resultado(){
+        var numero = Number(inputNumero.value)
+        var frase = inputFrase.value
+        var contador = 1
+        while (contador<=numero) {
+            alert(frase)
+            contador++
+        }
+    }
+</script>
