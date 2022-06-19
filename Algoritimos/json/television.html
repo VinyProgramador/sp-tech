@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Television</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/television.png" type="image/x-icon">
+    <script src="js/television.js"></script>
+</head>
+<body>
+    <main>
+        <div class="info" style="flex-direction: column;">
+            <span>Volume: <p id="volumeTv"></p></span>
+            <span><img src="img/info.png" alt=""></span>
+        </div>
+        <div class="television">
+            <div>
+                <div class="volume" id="tv">
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <div>
+                <button><img src="img/power-on.png" alt=""></button>
+                <button onclick="controle.alterarVolume('+')"><p>+</p></button>
+                <button onclick="controle.alterarVolume('-')"><p>-</p></button>
+                <button onclick="controle.alterarCanal(13)"><p>13</p></button>
+                <button onclick="controle.alterarCanal(7)"><p>7</p></button>
+                <button onclick="controle.alterarCanal(5)"><p>5</p></button>
+                <button onclick="controle.alterarCanal(4)"><p>4</p></button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

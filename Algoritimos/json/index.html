@@ -4,31 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Television</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HOME | television</title>
     <link rel="shortcut icon" href="img/television.png" type="image/x-icon">
-    <script src="js/television.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
-    <main>
-        <div class="television">
-            <div>
-                <div class="volume">
-                    <img src="img/band.webp" alt="">
-                </div>
-            </div>
+    <form>
+        <div class="mensage">
+            <p>Indo para Tv: <span id="marcaTxt"></span>...</p>
         </div>
-        <div class="control">
-            <div>
-                <button><img src="img/power-on.png" alt=""></button>
-                <button><p>+</p></button>
-                <button><p>-</p></button>
-                <button><p>13</p></button>
-                <button><p>7</p></button>
-                <button><p>5</p></button>
-                <button><p>4</p></button>
-            </div>
-        </div>
-    </main>
+        <img src="img/television.png" alt="">
+        <p>Escolha uma marca de prefêrencia:</p>
+        <select id="marca">
+            <option value=""></option>
+            <option value="Samsung">Samsung</option>
+            <option value="Philips">Philips</option>
+            <option value="LG">LG</option>
+        </select>
+        <button onclick="enviarDados()" type="button">ENVIAR</button> 
+    </form>
 </body>
 </html>
