@@ -1,24 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
 * {
-  font-family: 'Libre Baskerville';
+  font-family: 'libre baskerville ';
 }
 .body {
-  background-color: #888;
+  background: #d6d6d6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #444;
-  height: 14vh;
-  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #7e7e7e 0%,
+    #5d5c5d 35%,
+    #a7a6a7 68%,
+    #787878 100%
+  );
+  background-size: 200% 200%;
+  animation: colors 15s ease infinite;
+  height: 10vh;
+  /* text-align: center; */
   align-items: center;
   justify-content: space-around;
   display: flex;
-  color: #f5f5f5;
+  color: #f1faee;
   font-weight: bolder;
-  margin-bottom: -80px;
+  margin-bottom: -90px;
+  -webkit-box-shadow: 0 3px 5px #393f484d;
+  -moz-box-shadow: 0 3px 5px #393f484d;
+  box-shadow: 0 3px 5px #393f484d;
 }
 
-header h3 {
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header a{
+  text-decoration: none;
+}
+
+header img {
+  height: 110px;
+}
+header h1 {
   width: 33%;
   height: 40px;
   padding: 0px;
@@ -26,18 +66,29 @@ header h3 {
 }
 
 header input {
+  background-color: #fffffc;
   width: 65%;
   height: 40px;
   padding: 0px;
-  margin: 0px;
+  margin: 10px 10px;
   text-align: center;
+  border: none;
+  border: 0.2;
+  border-radius: 3px;
+
+  outline: none;
 }
 header button {
-  height: 38px;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
   border: none;
-  margin-left: 2px;
-  background-color: #e7e3e388;
-  color: #f5f5f5;
+  text-decoration: none;
+}
+header button ion-icon {
+  color: #f1faee;
+  height: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -45,10 +96,22 @@ header button {
   margin-left: 30px;
 }
 
+#sp1 {
+  font-weight: bold;
+  color: #fff;
+}
+
+#sp2 {
+  color: #73e668;
+  text-shadow: rgb(54, 54, 54) 1px 1px 3px;
+}
+
 .principal {
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
+  margin-bottom: 30px;
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 75% 25%;
   grid-template-rows: 100px 450px 150px;
   grid-template-areas:
@@ -59,17 +122,20 @@ header button {
 
 section {
   grid-area: secao;
-  background-color: #f5f5f5;
-  border: 5px solid #888;
+  background-color: #f1faee;
+
+  border-radius: 5px;
 }
 
 aside {
   grid-area: barra-lateral;
-  background-color: #f5f5f5;
-  border: 5px solid #888;
+  background-color: #f1faee;
+  border-radius: 5px;
+  overflow-y: scroll;
 }
 
 footer {
+  grid-column-gap: 8px;
   grid-area: rodape;
   display: flex;
   justify-content: space-evenly;
@@ -78,12 +144,12 @@ footer {
 .parte2,
 .parte3 {
   width: 25%;
-  background-color: #f5f5f5;
-  border: 5px solid #888;
+  background-color: #f1faee;
+  border-radius: 5px;
 }
 
 .parte2 {
-  width: 50%;
+  width: 49.5%;
   margin: 0 2px;
 }
 
@@ -91,16 +157,10 @@ footer {
   margin: 0;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .principal {
     grid-template-columns: 100%;
     grid-template-areas: 'cabecalho' 'secao' 'barra-lateral' 'rodape';
-  }
-
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
   }
 
   .parte1,
@@ -117,7 +177,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 791px) {
   body {
     margin: 0 15px;
   }
@@ -126,18 +186,26 @@ footer {
   .parte1,
   .parte2,
   .parte3 {
-    width: 100%;
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 10px;
   }
 
   .parte2 {
     order: initial;
   }
+
+  .swiper-slide {
+    margin: 0;
+  }
 }
+
 
 /* SWIPER */
 .swiper {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 
 .swiper-slide {
