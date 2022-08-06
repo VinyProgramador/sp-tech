@@ -7,6 +7,7 @@
     <title>EXnews</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/newspaper.png" type="image/x-icon">
+    <script src="js/main.js"></script>
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -41,15 +42,25 @@
     <div class="principal">
       <section>
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/Notícia.jpg" />
+          <div onmouseover="mudarNoticias()" class="swiper-wrapper">
+            <div id="01" class="swiper-slide">
+              <img src="img/1.png"/>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
+            <div onmouseover="mudarNoticias()" id="02" class="swiper-slide">
+              <img src="img/2.png" alt="">
+            </div>
+            <div onmouseover="mudarNoticias()" id="03" class="swiper-slide">
+              <img src="img/3.png" alt="">
+            </div>
+            <div onmouseover="mudarNoticias()" id="04" class="swiper-slide">
+              <img src="img/4.png" alt="">
+            </div>
+            <div onmouseover="mudarNoticias()" id="05" class="swiper-slide">
+              <img src="img/5.png" alt="">
+            </div>
+            <div onmouseover="mudarNoticias()" id="06" class="swiper-slide">
+              Slide 6
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
