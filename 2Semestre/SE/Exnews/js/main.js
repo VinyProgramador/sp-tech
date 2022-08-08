@@ -30,10 +30,7 @@ function mudarNoticias() {
         Até que um salvador da pátria, funcionário da Accenture, surge e me auxilia no momento mais vergonhoso da
         semana. Sai rindo de alívio e agradecendo, tentando amenizar a vergonha passada </p>`
         mudarParticipante.innerHTML = "<img src='img/charles.jpg' id='imgParticipante'/>"
-        noticia02.innerHTML = `<p> pontos bons da empresa: Super acolhedora, funcionários gentis, o local por dentro é lindo e mostra muita
-        diversidade!
-        <br><br>
-        Pontos ruins: Muitos contratos pra assinar, e catracas um pouco complicadas.</p>`
+
     }
     else if (ativa.item(0) == div02) {
         a.item(0).style.backgroundImage = 'url(img/logoAccenture.jpeg)'
@@ -53,13 +50,22 @@ function mudarNoticias() {
         Ao começarmos a jogar eu o estagiário era o nível mais alto do time então se alguém fosse conseguir enfrenta-los acharam que seria eu mas infelizmente não consegui bater a expectativa que colocaram em mim. Após uma árdua partida que infelizmente acabou em menos de 12 minutos nos estamos derrotados e a pior parte eu tinha pensado que poderia fazer alguma coisa mas não fiz nada. Fomos derrotados por streamers mas afinal eles já tem os nome deles eles jogam bem já sabíamos disso mas não pensamos que perderíamos tão feio.
         Após a partida todos nos ficamos desanimados afinal uma derrota estando tão perto da vitória dói né e então todos saíram e não quiseram mais jogar. Outro dia jogamos partidas normais, ficamos em call batendo papo e tudo ficou normal já jogamos várias vezes agora e quem sabe algum dia jogamos outro campeonato, mas por enquanto sabemos apenas que não esqueceremos essa surra tão cedo. </p>`
         mudarParticipante.innerHTML = "<img src='img/brenão.jpg' id='imgParticipante'/>"
-        noticia02.innerHTML = `<p>xpto</p>`
+        noticia02.innerHTML = `<p>Ponto bom: a empresa definitivamente é muito acolhedora e respeita a todos não se importando com qualquer tipo de diferença
+        <br><br>
+        Ponto ruim: Durante o processo de admissão eram enviados documentos atrás de documentos para serem preenchidos e assinados acho que poderiam enviar muitos em conjunto em vez de separadamente</p>`
     }
     else if (ativa.item(0) == div04) {
         a.item(0).style.backgroundImage = 'url(img/logoDeloitte.jpeg)'
         mudarParticipante.innerHTML = "<img src='img/viniNunes.jpeg' id='imgParticipante'/>"
-        noticia03.innerHTML = `<p>xpto</p>`
-        noticia02.innerHTML = `<p>xpto</p>`
+        noticia03.innerHTML = `<p>Estágiaro se diz feliz feliz por ter a oportunidade de trabalhar em empresa que está em mais de 184 países, e coda nas ferias sem parar
+        <br><br>
+        Durante as ferias, ainda sem estar com nenhuma responsabilidade pela empresa, o estágiario em questão descbre por funcionarios e pelo gestor quais linguagens ira codar dentro do ambiente coorporativo, e decide comecar alguns projetos para não ficar parado, isso resultou uma melhora sem sua lógica de programação e o deixou animado para o início do estágio.
+        </p>`
+        noticia02.innerHTML = `<p>Ponto bom:
+        Estágiarios da SpTech fizeram um contato e nós receberam muito bem, e atuar em uma area que coda com Python e .NET
+        <br><br>
+        Ponto ruim: Contato demorado por parte da empresa, por parte da contratação.
+        </p>`
     }
     else if (ativa.item(0) == div05) {
         a.item(0).style.backgroundImage = 'url(img/logoAccenture.jpeg)'
@@ -67,8 +73,10 @@ function mudarNoticias() {
         noticia03.innerHTML = `<p>No dia 24/06/2022 amigos se reunem para se despedir de amigo que foi convocado para a Policia do Exército Brasileiro</p>
         <p>Como foi algo que pegou todos de surpresa foi com certeza um dia em que eles tiveram muito o que conversar, mas eles não se despediram com um tom triste mas sim curtindo o máximo que eles podiam.</p>
         <p>Um dos amigos diz:”É sempre triste ter que ficar longe de um amigo mas pelo menos a gente sabe que não é pra sempre.”</p>`
-        noticia02.innerHTML = `<p>xpto</p>`
-    }
+        noticia02.innerHTML = `<p> pontos bons da empresa: Super acolhedora, funcionários gentis, o local por dentro é lindo e mostra muita
+        diversidade!
+        <br><br>
+        Pontos ruins: Muitos contratos pra assinar, e catracas um pouco complicadas.</p>`    }
     else {
         a.item(0).style.backgroundImage = 'url(img/logoDeloitte.jpeg)'
         noticia02.innerHTML = `<p>ponto bom:
