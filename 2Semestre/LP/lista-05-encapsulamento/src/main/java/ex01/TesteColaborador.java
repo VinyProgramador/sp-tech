@@ -3,44 +3,30 @@ package ex01;
 public class TesteColaborador {
 
     public static void main(String[] args) {
-
         RecursosHumanos rh = new RecursosHumanos();
+        Colaborador func01 = new Colaborador();
+        Colaborador func02 = new Colaborador();
 
-        String cargo = "Estágiario";
-        String nome = "Vinicius Nunes";
-        Double salario = 1800.00;
+        func01.setNomeColaborador("Viny");
+        func01.setcargoColaborador("Estágiario");
+        func01.setSalario(1500.0);
 
-        String cargo02 = "Analista Jr";
-        String nome02 = "Cristhian";
-        Double salario02 = 2900.00;
+        func02.setNomeColaborador("Manuel");
+        func02.setcargoColaborador("Dev Senior");
+        func02.setSalario(7000.0);
 
-        Colaborador funcionario01 = new Colaborador(nome, cargo, salario);
-        Colaborador funcionario02 = new Colaborador(nome02, cargo02, salario02);
+        System.out.println(func01.toString());
+        System.out.println(func02.toString());
 
-        System.out.println(String.format("Nome: %s\n"
-                + "Cargo: %s\n"
-                + "Salário: %.2f",
-                funcionario01.nome, funcionario01.cargo, funcionario01.salario));
+        rh.promoverColaborador(func01, "Dev jr", 3000.0);
+        rh.promoverColaborador(func01, "Dev Pleno", 1000.0);
 
-        System.out.println("");
+        rh.reajustarSalario(func02, 3.0);
+        System.out.println(func01.toString());
+        System.out.println(func02.toString());
 
-        System.out.println(String.format("Nome: %s\n"
-                + "Cargo: %s\n"
-                + "Salário: %.2f",
-                funcionario02.nome, funcionario02.cargo, funcionario02.salario));
-        System.out.println("");
+        rh.exibirInformacoesRh();
 
-        rh.promoverColaborador(funcionario01.nome, funcionario01.cargo = "Estagiario Nível 02", funcionario01.salario, 2000.00);
-        System.out.println("");
-
-        rh.promoverColaborador(funcionario02.nome, funcionario02.cargo = "Analista Pleno", funcionario01.salario, 1000.00);
-        rh.reajustarSalario(funcionario02.nome, funcionario02.salario, 3.00);
-
-        System.out.println("");
-        System.err.println("Dados Atualizados:");
-        
-
-        rh.exibirInformacoesRhsRh();
     }
 
 }

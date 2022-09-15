@@ -5,26 +5,27 @@ public class RecursosHumanos {
     Integer totalPromovidos = 0;
     Integer totalSalariosAjustados = 0;
 
-    void reajustarSalario(String coloborador, Double valorSalario, Double valorReajuste) {
-        
-        valorReajuste = valorReajuste/100;
-        valorReajuste = valorSalario * valorReajuste;
-        valorSalario = valorReajuste + valorSalario;
+    void reajustarSalario(Colaborador funcionario, Double valorReajuste) {
+        valorReajuste = valorReajuste / 100;
+        valorReajuste = funcionario.getSalario() * valorReajuste;
+        funcionario.setSalario(valorReajuste + funcionario.getSalario());
         totalSalariosAjustados++;
     }
 
-    void promoverColaborador(String coloborador, String novoCargo, Double salarioAtual, Double novoSalario) {
-
-        if (novoSalario < salarioAtual) {
+    Double promoverColaborador(Colaborador funcionario, String novoCargo, Double novoSalario) {
+        if (novoSalario < funcionario.getSalario()) {
             System.out.println("Operação inválida");
         } else {
+            funcionario.setSalario(novoSalario);
             totalPromovidos++;
         }
+        return novoSalario;
     }
 
-    void exibirInformacoesRhsRh() {
+    void exibirInformacoesRh() {
         System.out.println(String.format("Total de promovidos: %d \n"
                 + "Total de salários reajustados: %d",
                 totalPromovidos, totalSalariosAjustados));
     }
+
 }
