@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Teste classe ListaUtil" time="0.085" tests="21" errors="3" skipped="0" failures="18">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/miniguiti/Downloads/projeto-lista-desafio/target/test-classes:/home/miniguiti/Downloads/projeto-lista-desafio/target/classes:/home/miniguiti/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/miniguiti/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/miniguiti/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/miniguiti/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/miniguiti/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/miniguiti/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/miniguiti/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:"/>
+    <property name="java.vm.vendor" value="AdoptOpenJDK"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="user.country.format" value="BR"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/miniguiti/.sdkman/candidates/java/11.0.9.hs-adpt/lib"/>
+    <property name="sun.java.command" value="/home/miniguiti/Downloads/projeto-lista-desafio/target/surefire/surefirebooter14659193962619108645.jar /home/miniguiti/Downloads/projeto-lista-desafio/target/surefire 2022-09-28T14-52-26_860-jvmRun1 surefire13119656600608047054tmp surefire_013464275873366190355tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/miniguiti/Downloads/projeto-lista-desafio/target/test-classes:/home/miniguiti/Downloads/projeto-lista-desafio/target/classes:/home/miniguiti/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/miniguiti/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/miniguiti/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/miniguiti/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/miniguiti/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/miniguiti/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/miniguiti/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/miniguiti"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-11-04"/>
+    <property name="java.home" value="/home/miniguiti/.sdkman/candidates/java/11.0.9.hs-adpt"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/miniguiti/Downloads/projeto-lista-desafio"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/miniguiti/Downloads/projeto-lista-desafio/target/surefire/surefirebooter14659193962619108645.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.9.1+1"/>
+    <property name="user.name" value="miniguiti"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-46-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="AdoptOpenJDK"/>
+    <property name="maven.ext.class.path" value="/snap/netbeans/69/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="localRepository" value="/home/miniguiti/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.9.1"/>
+    <property name="user.dir" value="/home/miniguiti/Downloads/projeto-lista-desafio"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="user.language.format" value="pt"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vm.version" value="11.0.9.1+1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="add(): Quando adicionado valor null não altera o tamanho da lista" classname="Teste classe ListaUtil" time="0.032">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista(ListaUtilTest.java:30)
+]]></failure>
+  </testcase>
+  <testcase name="count(): Quando a lista possuir 3 valores retorna 3" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaPossui3IndicesPreenchidosRetorna3(ListaUtilTest.java:85)
+]]></failure>
+  </testcase>
+  <testcase name="hasDuplicidade(): Quando a lista não possuir valores duplicados deve retornar false" classname="Teste classe ListaUtil" time="0.001">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse(ListaUtilTest.java:238)
+]]></error>
+  </testcase>
+  <testcase name="getMenor(): Quando a lista estiver vazia deve retornar 0" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoEListaEstaVaziaDeveRetornar0(ListaUtilTest.java:192)
+]]></failure>
+  </testcase>
+  <testcase name="remove(): Quando passado um valor que existe na lista o valor deve ser removido" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento10DiminuiTamanhoDaLista(ListaUtilTest.java:52)
+]]></failure>
+  </testcase>
+  <testcase name="getMaior(): Quando a lista estiver vazia deve retornar 0" classname="Teste classe ListaUtil" time="0.002">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoEListaEstaVaziaDeveRetornar0(ListaUtilTest.java:171)
+]]></failure>
+  </testcase>
+  <testcase name="somar(): Quando a lista possuir valores 30, 10 e 2 deve retornar a soma correta (42)" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <42> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar42(ListaUtilTest.java:142)
+]]></failure>
+  </testcase>
+  <testcase name="somar(): Quando a lista possuir valores 20, 10, 50, 17 e 2 deve retornar a soma correta (99)" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <99> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar99(ListaUtilTest.java:155)
+]]></failure>
+  </testcase>
+  <testcase name="add(): Quando adicionado valores positivos e negativos aumenta o tamanho da lista" classname="Teste classe ListaUtil" time="0.002">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComValorPositivosENegativosAumentaTamanhoDaLista(ListaUtilTest.java:20)
+]]></failure>
+  </testcase>
+  <testcase name="countImpares(): Quando a lista possuir 3 valores ímpares retorna 3" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaPossui3ImparesRetorna3(ListaUtilTest.java:131)
+]]></failure>
+  </testcase>
+  <testcase name="hasDuplicidade(): Quando a lista possuir valores duplicados deve retornar true" classname="Teste classe ListaUtil" time="0">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue(ListaUtilTest.java:223)
+]]></error>
+  </testcase>
+  <testcase name="getMenor(): Quando a lista possuir valores deve retornar o menor" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <-10> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoDeveRetornar10Negativo(ListaUtilTest.java:208)
+]]></failure>
+  </testcase>
+  <testcase name="remove(): Quando passado um valor que não existe, não altera o tamanho da lista" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento101NaoDiminuiTamanhoDaLista(ListaUtilTest.java:64)
+]]></failure>
+  </testcase>
+  <testcase name="count(): Quando a lista estiver vazia deve retornar 0" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:74)
+]]></failure>
+  </testcase>
+  <testcase name="somar(): Quando a lista estiver vazia deve retornar 0" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoEListaEstavaziaDeveRetornar0(ListaUtilTest.java:163)
+]]></failure>
+  </testcase>
+  <testcase name="countPares(): Quando a lista estiver vazia retorna 0" classname="Teste classe ListaUtil" time="0">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:110)
+]]></failure>
+  </testcase>
+  <testcase name="countImpares(): Quando a lista estiver vazia retorna 0" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:118)
+]]></failure>
+  </testcase>
+  <testcase name="countPares(): Quando a lista possuir 6 valores pares retorna 6" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <6> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaPossui6ParesRetorna6(ListaUtilTest.java:102)
+]]></failure>
+  </testcase>
+  <testcase name="hasDuplicidade(): Quando a lista estiver vazia deve retornar false" classname="Teste classe ListaUtil" time="0.001">
+    <error type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaEstaVaziaDeveRetornarFalse(ListaUtilTest.java:245)
+]]></error>
+  </testcase>
+  <testcase name="remove(): Quando remover um valor null não altera o tamanho da lista" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista(ListaUtilTest.java:40)
+]]></failure>
+  </testcase>
+  <testcase name="getMaior(): Quando a lista possuir valores deve retornar o maior" classname="Teste classe ListaUtil" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <42> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoDeveRetornar42(ListaUtilTest.java:184)
+]]></failure>
+  </testcase>
+</testsuite>

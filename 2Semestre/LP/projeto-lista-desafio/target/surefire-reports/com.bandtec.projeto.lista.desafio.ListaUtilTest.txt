@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------
+Test set: Teste classe ListaUtil
+-------------------------------------------------------------------------------
+Tests run: 21, Failures: 18, Errors: 3, Skipped: 0, Time elapsed: 0.085 s <<< FAILURE! - in com.bandtec.projeto.lista.desafio.ListaUtilTest
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista  Time elapsed: 0.032 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista(ListaUtilTest.java:30)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaPossui3IndicesPreenchidosRetorna3  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaPossui3IndicesPreenchidosRetorna3(ListaUtilTest.java:85)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse(ListaUtilTest.java:238)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoEListaEstaVaziaDeveRetornar0  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoEListaEstaVaziaDeveRetornar0(ListaUtilTest.java:192)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento10DiminuiTamanhoDaLista  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento10DiminuiTamanhoDaLista(ListaUtilTest.java:52)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoEListaEstaVaziaDeveRetornar0  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoEListaEstaVaziaDeveRetornar0(ListaUtilTest.java:171)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar42  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <42> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar42(ListaUtilTest.java:142)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar99  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <99> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar99(ListaUtilTest.java:155)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComValorPositivosENegativosAumentaTamanhoDaLista  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComValorPositivosENegativosAumentaTamanhoDaLista(ListaUtilTest.java:20)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaPossui3ImparesRetorna3  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaPossui3ImparesRetorna3(ListaUtilTest.java:131)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue(ListaUtilTest.java:223)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoDeveRetornar10Negativo  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-10> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoDeveRetornar10Negativo(ListaUtilTest.java:208)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento101NaoDiminuiTamanhoDaLista  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento101NaoDiminuiTamanhoDaLista(ListaUtilTest.java:64)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaEstaVaziaRetorna0  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:74)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoEListaEstavaziaDeveRetornar0  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoEListaEstavaziaDeveRetornar0(ListaUtilTest.java:163)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaEstaVaziaRetorna0  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:110)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaEstaVaziaRetorna0  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:118)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaPossui6ParesRetorna6  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <6> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaPossui6ParesRetorna6(ListaUtilTest.java:102)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaEstaVaziaDeveRetornarFalse  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaEstaVaziaDeveRetornarFalse(ListaUtilTest.java:245)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista(ListaUtilTest.java:40)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoDeveRetornar42  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <42> but was: <null>
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoDeveRetornar42(ListaUtilTest.java:184)
+
