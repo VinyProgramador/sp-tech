@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Cadastrar alunos: <input id="inputCadastrar" type="text"><br>
+    <button onclick="PesquisarCadastrar()">Cadastrar Pesquisar</button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+    var listaAluno=[]
+    function PesquisarCadastrar(){
+         var alunos= inputCadastrar.value;
+         var alunoExiste = false;
+         for(var posicao = 0; posicao< listaAluno.length ; posicao++){
+             if(alunos == listaAluno[posicao]){
+                 alunoExiste=true;
+             }
+         }
+
+         if(alunoExiste){
+             alert('Aluno ja existe')
+         }
+         else{
+          listaAluno.push(alunos)
+         }
+         divResultado.innerHTML=''
+          for(posicao=0;posicao< listaAluno.length;posicao++){
+          divResultado.innerHTML+=`${listaAluno[posicao]}<br>`
+        
+        }
+
+    }
+</script>

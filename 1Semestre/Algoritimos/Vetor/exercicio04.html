@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        Informe o nome do  filme:<input  id="inputNomeFilme" type="text"><br>
+       <button onclick="cadastrarFilme()">Cadastrar </button><br>
+       <div id="mostrarFilme"></div>
+</body>
+</html>
+<script>
+        listaFilme=[];
+        contador=0;
+function cadastrarFilme(){
+        var cadastro = inputNomeFilme.value
+        listaFilme.push(cadastro);
+
+        if (contador % 2==0 ) {
+                mostrarFilme.innerHTML+=`<div style="color: red;">${contador}.${cadastro}</div><br>`
+
+
+        } else {
+                mostrarFilme.innerHTML+=`<div style="color: blue;">${contador}.${cadastro}</div><br>`
+        }
+        contador++
+
+}       
+</script>

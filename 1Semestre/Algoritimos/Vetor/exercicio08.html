@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nota: <input id="inputNota" type="text"><br>
+    intervalo de notas 1: <input id="inputNum1" type="text"><br>
+    intervalo de notas 2: <input id="inputNum2" type="text"><br>
+    <button onclick="Cadastrar()">Cadastrar Nota</button><br>
+    <button onclick="reverNotas()">Rever as notas</button><br>
+    <div id="divResultado"></div><br>
+
+</body>
+</html>
+
+<script>
+    listaNota =[];
+    var qtdNotas=0
+    var intervalo1 = Number(inputNum1.value);
+    var intervalo2 = Number(inputNum2.value);
+
+    function Cadastrar(){
+        var notas = Number(inputNota.value);
+        listaNota.push(notas)    
+        for(var posicao = 0; posicao< listaNota.length ; posicao++){
+
+        }
+        qtdNotas++
+
+    }
+
+    function reverNotas(){
+        var notas = Number(inputNota.value);
+        for(var oco=0; oco < listaNota.length; oco++){
+
+            if (notas<=intervalo1 && notas>=intervalo2 ) {
+                oco++
+            }
+            divResultado.innerHTML=`Foram cadastras ${oco} notas que estão no intervalo de  ${inputNum1.value} até
+            ${inputNum2.value} e a média dessas notas é ${notas/qtdNotas}`
+        }
+        
+
+    }
+
+</script>

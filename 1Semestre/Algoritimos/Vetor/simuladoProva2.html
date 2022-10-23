@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Simulado Prova:</h1><br>
+     Nome do País: <input id="nomePaisInput" type="text"><br>
+     Populaçaõ do País: <input id="populacaoPaisInput" type="text"><br>
+     Grau de liberdade econômica: <input id="grauLiberdadeInput" type="number"><br>
+     <button onclick="CadastrarPais()">Cadastrar País</button><br>
+     <button onclick="analisar()">Analisar País</button><br>
+     <div id="resultadoDiv"></div>
+
+</body>
+
+</html>
+<script>
+    listaNomePais = [];
+    listaPopulacao = [];
+    listGrauLiberdade = [];
+    listaDesempregados = [];
+    listaIdh=[];
+    function CadastrarPais(){
+
+        var nomePais = nomePaisInput.value;
+        var populacaoPais = Number(populacaoPaisInput.value);
+        var grauLiberdade = Number(grauLiberdadeInput.value);
+        if (populacaoPais< 1000 || grauLiberdade < 0 || grauLiberdade > 100) {
+            alert('Valores inválidos!')
+        }
+        else{
+            var categoria ='';
+            var idh = '';
+            var desempregoMedio = 0;
+
+            if (grauLiberdade > 80) {
+                var categoria ='LIVRE';
+                var idh = '0.85';
+                var desempregoMedio = 0.05;
+            }
+            else if(grauLiberdade > 70){
+                var categoria ='QUASE LIVRE ';
+                var idh = '0.77';
+                var desempregoMedio = 0.07;                
+            }
+            else if (grauLiberdade > 60) {
+                var categoria ='MODERADAMENTE LIVRE';
+                var idh = '0.74';
+                var desempregoMedio = 0.08;                    
+            }
+            else if (grauLiberdade > 50) {
+                var categoria ='QUASE REPRIMIDO';
+                var idh = '0.65';
+                var desempregoMedio = 0.15;                
+            }
+            else{
+                var categoria ='REPRIMIDO';
+                var idh = '0.60';
+                var desempregoMedio = 0.22;                   
+            }
+
+            var desempregados = populacaoPais*desempregoMedio;
+            var texto= `Desemprego médio provável: ${desempregoMedio*100}%, ou seja, talvez ${desempregados} estejam sem emprego.`
+
+            listaNomePais.push(nomePais);
+            listaPopulacao.push(populacaoPais);
+            listGrauLiberdade.push(grauLiberdade);
+            listaIdh.push(idh);
+            listaDesempregados.push(texto);
+        }
+    }
+    function analisar(){
+
+        resultadoDiv.innerHTML=''
+        for(var contador=0; contador<listaNomePais.length; contador++){
+            resultadoDiv.innerHTML+=`
+            País ${contador + 1}: ${listaNomePais[contador]}<br>
+            Categoria: ${listGrauLiberdade[contador]}<br>
+            Habitantes: ${listaPopulacao[contador]}<br>
+            IDH médio provável: ${listaIdh[contador]}<br>  
+            Desemprego médio provavel: ${listaDesempregados[contador]} <br><br>`    
+        }
+    }
+</script>
