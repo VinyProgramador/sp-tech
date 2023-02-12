@@ -9,7 +9,6 @@ public class Empresa {
 
     //Contrutor
 
-
     public Empresa() {
         lista = new ArrayList<>();
     }
