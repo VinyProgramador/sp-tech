@@ -59,7 +59,7 @@ public class UserController {
 
     //Delete by name
     @DeleteMapping("/delete/{name}")
-    public String removeByCpf(@PathVariable String name) {
+    public String removeByName(@PathVariable String name) {
         for (User user : users) {
             if (user.getName().equals(name)) {
                 users.remove(user);

@@ -8,8 +8,10 @@ public class App {
     public static void main(String[] args) {
 
         Scanner sc1 = new Scanner(System.in);
-        Scanner sc2 = new Scanner(System.in);
-
+        Scanner scNl = new Scanner(System.in);
+        Scanner scDb = new Scanner(System.in);
+        int numTyped;
+        Cart c1 = new Cart();
 
         System.out.println("\n" +
                 " __      ___                _____ _                 \n" +
@@ -20,9 +22,6 @@ public class App {
                 "     \\/   |_|_| |_|\\__, | |_____/ \\__\\___/|_|  \\___|\n" +
                 "                    __/ |                           \n" +
                 "                   |___/                            \n");
-
-        Integer numTyped = 0;
-        Cart c1 = new Cart();
 
         do {
             System.out.println("1. Adicionar Livro");
@@ -39,35 +38,55 @@ public class App {
                     System.out.println("Digite o código:");
                     Integer code = sc1.nextInt();
                     System.out.println("Digite o preço:");
-                    Double priceCost = sc1.nextDouble();
+                    Double priceCost = scDb.nextDouble();
                     System.out.println("Digite o nome do livro:");
-                    String name = sc2.nextLine();
+                    String name = scNl.nextLine();
                     System.out.println("Digite o nome do autor:");
-                    String author = sc2.next();
+                    String author = scNl.nextLine();
                     System.out.println("Digite o isbn:");
-                    String isbn = sc1.next();
+                    String isbn = scNl.nextLine();
 
-                    Book b1 = new Book(code, priceCost, name, author, isbn);
-                    c1.addSaleable(b1);
+                    c1.addSaleable(new Book(code, priceCost, name, author, isbn));
                     System.out.println("Livro cadastrado com Sucesso!");
                     break;
                 case 2:
                     System.out.println("Digite o código:");
                     Integer code2 = sc1.nextInt();
                     System.out.println("Digite o preço:");
-                    Double priceCost2 = sc1.nextDouble();
+                    Double priceCost2 = scDb.nextDouble();
                     System.out.println("Digite o nome do DVD:");
-                    String name2 = sc2.nextLine();
+                    String name2 = scNl.nextLine();
                     System.out.println("Digite o nome da Gravadora:");
-                    String recordCompany = sc1.nextLine();
-                    Dvd d1 = new Dvd(code2, priceCost2, name2,recordCompany);
+                    String recordCompany = scNl.nextLine();
+                    c1.addSaleable(new Dvd(code2, priceCost2, name2, recordCompany));
                     System.out.println("DVD cadastrado com Sucesso!");
+                    break;
+                case 3:
+                    System.out.println("Digite a descição do serviço:");
+                    String description = scNl.nextLine();
+                    System.out.println("Digite o código:");
+                    Integer code3 = sc1.nextInt();
+                    System.out.println("Digite a quantidadede horas:");
+                    Double amountHours = scDb.nextDouble();
+                    System.out.println("Digite o valor da hora:");
+                    Double hourValue = scDb.nextDouble();
+                    c1.addSaleable(new Service(description, code3, amountHours, hourValue));
+                    System.out.println("Serviço adionado com Sucesso!");
                     break;
                 case 4:
                     System.out.println("Exibindo itens do carrinho:");
                     c1.displayItemsCarts();
                     break;
-
+                case 5:
+                    System.out.println("Exibindo total das vendas:");
+                    System.out.println(c1.calculateTotalSale());
+                    ;
+                    break;
+                case 6:
+                    System.out.println("Até mais volte sempre!");
+                    break;
+                default:
+                    System.out.println("Opção Inválida..");
             }
 
         }

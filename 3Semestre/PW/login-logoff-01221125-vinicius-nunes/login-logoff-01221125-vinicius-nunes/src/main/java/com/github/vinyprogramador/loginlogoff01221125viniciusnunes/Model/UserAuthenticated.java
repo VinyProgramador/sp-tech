@@ -5,15 +5,18 @@ public class UserAuthenticated {
 
     private String name;
     private String email;
+    private Boolean isAuthenticated;
+
     public boolean getAuthenticated() {
+
         return isAuthenticated;
     }
 
     public void setAuthenticated(Boolean authenticated) {
+
         isAuthenticated = authenticated;
     }
 
-    private Boolean isAuthenticated;
     public UserAuthenticated(String name, String email, Boolean isAuthenticated) {
         this.name = name;
         this.email = email;

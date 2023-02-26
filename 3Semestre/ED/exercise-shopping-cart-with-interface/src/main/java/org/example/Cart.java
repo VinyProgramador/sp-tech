@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//Nome: Vinicius A Nunes
+//RA: 01221125
+
 public class Cart {
     List<Salable> listSaleable;
 
